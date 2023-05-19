@@ -1,0 +1,11 @@
+.redSquare {
+	background-color: rgb(188, 63, 63);
+	width: 100px;
+	height: 100px;
+}
+
+.yellowSquare {
+	background-color: rgb(188, 180, 63);
+	width: 100px;
+	height: 100px;
+}
