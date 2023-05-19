@@ -1,0 +1,7 @@
+.image {
+	width: 400px;
+	border-radius: 50px;
+}
+.border {
+	border: 5px solid yellow;
+}
