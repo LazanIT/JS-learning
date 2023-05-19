@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Predavanje broj 8</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+			crossorigin="anonymous"
+		/>
+	</head>
+	<body>
+		<!-- <h1>Hello world</h1> -->
+		<div class="container flex-wrap d-flex holder flex-column flex-wrap">
+			<div class="div gap-2 d-flex flex-column">
+				<button
+					class="btn btn-warning w-100 h-25"
+					id="btn"
+					onclick="console.log('Hello world!'); this.style.fontSize = '2rem'"
+				>
+					Click
+				</button>
+				<button class="btn btn-secondary w-100 h-25" id="askButton">
+					Ask me</button
+				><button class="btn btn-success w-100 h-25" id="oneButton">
+					One question
+				</button>
+				<button class="btn btn-danger w-100 h-25" id="randomButton">
+					Random question
+				</button>
+			</div>
+		</div>
+		<!-- Kao sto u JavaScript dodajemo eventListener click, takodje mozemo dodati i u HTML-u on click i unutar njega pisati sta ce to dugme ili neki tekst da radi -->
+		<script src="script.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+			integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+			integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
