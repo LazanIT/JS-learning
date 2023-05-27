@@ -1,0 +1,8 @@
+body {
+	width: 100%;
+}
+.btn:hover {
+    transition: 0.4s linear;
+	transform: translateX(10px);
+    color: rgb(23, 4, 75);
+}
