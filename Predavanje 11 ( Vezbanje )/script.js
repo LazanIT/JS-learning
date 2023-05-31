@@ -1,12 +1,14 @@
-// console.log("123"); // Testing
-
-let i = 0;
 let numberImg = document.getElementsByClassName("img").length;
-for (i = 0; i < 3; i++) {
-	const img = document.getElementsByClassName("img")[i];
-	img.addEventListener("click", function click(event) {
-		console.log("radi");
-		this.style.transform = "scale(1.1)";
-	});
+for (let i = 0; i < numberImg; i++) {
+	document
+		.getElementsByClassName("img")
+		[i].addEventListener("click", function () {
+			this.classList.toggle("zoom");
+		});
 }
-console.log(numberImg);
+// Jos jedan od nacina da se definise eventListener koji ce biti direktno vezan za odredjeni tekst
+const div = document.getElementById("holder");
+div.addEventListener("click", function click(e) {
+	let event = e.target;
+	console.log(event);
+});
