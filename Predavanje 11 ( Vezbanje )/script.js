@@ -12,9 +12,15 @@ div.addEventListener("click", function click(event) {
 	let e = event.target;
 	console.log(e);
 });
-
+// Drugi nacin
 const holder = document.getElementById("imgHolder");
 holder.addEventListener("click", function click(event) {
 	let a = event.target;
 	a.classList.toggle("zoom");
+});
+// Home work
+const holderSecond = document.getElementById("imgHolderSecond");
+holderSecond.addEventListener("mouseover", function mouseover(rounded) {
+	let border = rounded.target;
+	border.classList.toggle("rounded");
 });

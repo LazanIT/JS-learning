@@ -20,3 +20,6 @@
 	transition: 0.4s ease-in-out;
 	border-radius: 50px;
 }
+.rounded{
+	border-radius: 100%;
+}
