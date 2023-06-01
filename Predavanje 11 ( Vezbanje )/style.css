@@ -14,3 +14,9 @@
 .zoom {
 	transform: scale(1.05);
 }
+.images {
+	width: 30%;
+	height: 50%;
+	transition: 0.4s ease-in-out;
+	border-radius: 50px;
+}

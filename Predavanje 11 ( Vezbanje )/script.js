@@ -8,7 +8,13 @@ for (let i = 0; i < numberImg; i++) {
 }
 // Jos jedan od nacina da se definise eventListener koji ce biti direktno vezan za odredjeni tekst
 const div = document.getElementById("holder");
-div.addEventListener("click", function click(e) {
-	let event = e.target;
-	console.log(event);
+div.addEventListener("click", function click(event) {
+	let e = event.target;
+	console.log(e);
+});
+
+const holder = document.getElementById("imgHolder");
+holder.addEventListener("click", function click(event) {
+	let a = event.target;
+	a.classList.toggle("zoom");
 });
