@@ -30,3 +30,4 @@ buttonAdd.addEventListener("click", function click() {
 		}
 	});
 });
+// Takodje buttonShow & buttonShowCity mozemo staviti i van eventListener-a, gore prikazano je samo jedan od nacina
