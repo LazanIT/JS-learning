@@ -19,6 +19,7 @@ button.addEventListener("click", function click(event) {
 });
 // Drugi nacin za upis gradova i njihovo prikazivanje
 // Drugi nacin je preko array, tacnije napravimo array u koji cemo kasnije pushati elemente i na odredjeno dugme ih samo prikazivati
+// Drugi nacin koda je mnogo funkcionalniji i optimizaniji u odnosu na prvi kod
 buttonAdd.addEventListener("click", function click() {
 	let title = document.createElement("h2");
 	title.innerHTML = prompt("Add your city");
