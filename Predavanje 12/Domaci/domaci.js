@@ -43,3 +43,8 @@ warmButton.addEventListener("click", function () {
 		}
 	}
 });
+removeButton.addEventListener("click", function () {
+	cities.innerHTML = "";
+	cold.innerHTML = "";
+	warm.innerHTML = "";
+});
