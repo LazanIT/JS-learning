@@ -16,15 +16,33 @@
 		/>
 	</head>
 	<body>
-		<div id="" class="holder">
-			<button type="btn" class="btn btn-primary" id="addCity">Add city</button>
+		<div
+			id=""
+			class="holder d-flex justify-content-center align-items-center flex-column gap-2 mt-2"
+		>
+			<button type="btn" class="btn btn-success" id="addCity">Add city</button>
 			<button type="btn" class="btn btn-warning" id="showAllCities">
 				Show all cities
 			</button>
 		</div>
-		<div class="temperatureHolder"></div>
-		<div id="cities"></div>
-
+		<div
+			class="temperatureHolder d-flex flex-wrap justify-content-center mt-3 gap-2"
+		>
+			<button type="btn" class="btn btn-primary" id="coldCities">
+				Cold cities
+			</button>
+			<button type="btn" class="btn btn-danger" id="warmCities">
+				Warm cities
+			</button>
+			<button type="btn" class="btn btn-secondary" id="remove">Remove city</button>
+		</div>
+		<div
+			class="citiesHolder justify-content-center h-100 d-flex flex-wrap mt-5 gap-2"
+		>
+			<div id="cities" class="card w-25 h-25 text-center bg-transparent"></div>
+			<div id="cold" class="card w-25 h-25 text-center bg-transparent"></div>
+			<div id="warm" class="card w-25 h-25 text-center bg-transparent"></div>
+		</div>
 		<!-- Custom JavaScript -->
 		<script src="domaci.js"></script>
 		<!-- Boostrap JavaScript and popper connection -->
