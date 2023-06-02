@@ -1,0 +1,10 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: url(/Images/windy-5940755_1920.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+	height: 100vh;
+}
