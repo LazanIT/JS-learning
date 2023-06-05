@@ -12,6 +12,11 @@
 */
 $(document).ready(function () {
 	$("#btnClick").click(function () {
-		alert("hello world");
+		console.log("13");
+		this.style.backgroundColor = "blue";
 	}); // je jednako document.getElementById("btnClick").addEventListener("click", function click(){});
+
+	$(".btn-custom").mouseover(function () {
+		$(this).css({ backgroundColor: "blue", color: "black" });
+	});
 });
