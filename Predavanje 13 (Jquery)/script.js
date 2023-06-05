@@ -19,4 +19,9 @@ $(document).ready(function () {
 	$(".btn-custom").mouseover(function () {
 		$(this).css({ backgroundColor: "blue", color: "black" });
 	});
+
+	$("#btnHide").click(function () {
+		$("#paragraph").toggle("open"); // pored toggle postoji i slideToggle
+	});
 });
+// Da bi imali neke animacije postoji jquery UI
