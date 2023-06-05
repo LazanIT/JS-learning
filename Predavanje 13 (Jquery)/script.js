@@ -11,6 +11,7 @@
     A kod se izvrsava tek kada se sve ocita iz HTML-a
 */
 $(document).ready(function () {
-
-    
+	$("#btnClick").click(function () {
+		alert("hello world");
+	}); // je jednako document.getElementById("btnClick").addEventListener("click", function click(){});
 });
