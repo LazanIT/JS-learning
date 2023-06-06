@@ -29,8 +29,12 @@ $(document).ready(function () {
 	});
 
 	$("#calculate").click(function () {
-		let numberOne = parseFloat($("#numberOne").val());
-		let numberTwo = parseFloat($("#numberTwo").val());
+		let numberOne = parseFloat(
+			$("#numberOne").val()
+		); /* Takodje ovo sto smo uradili napisali odma parseInt ili parseFloat je malo teze za pocetnika */
+		let numberTwo = parseFloat(
+			$("#numberTwo").val()
+		); /* Zato je bolje u drugu liniju napisati numberOne = parseFloat(numberOne)  */
 		let addition = numberOne + numberTwo;
 		alert(addition);
 	});
