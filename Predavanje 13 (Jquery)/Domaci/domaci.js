@@ -15,4 +15,16 @@ $(document).ready(function () {
 			alert(subtraction);
 		}
 	});
+	$("#multiplicationNumbers").click(function () {
+		let numberOne = parseFloat($("#numberOne").val());
+		let numberTwo = parseFloat($("#numberTwo").val());
+		let multiplication = numberOne * numberTwo;
+		alert(multiplication);
+	});
+	$("#dividingNumbers").click(function () {
+		let numberOne = parseFloat($("#numberOne").val());
+		let numberTwo = parseFloat($("#numberTwo").val());
+		let dividing = numberOne / numberTwo;
+		alert(dividing);
+	});
 });
