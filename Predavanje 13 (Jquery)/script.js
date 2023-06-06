@@ -25,7 +25,14 @@ $(document).ready(function () {
 	});
 
 	$("#btnChange").click(function () {
-		$("#paragraphTwo").animate({ paddingTop: "20px", height: "toggle" }, 500);
+		$("#paragraphTwo").animate({ fontSize: "40px" }, 500);
+	});
+
+	$("#calculate").click(function () {
+		let numberOne = parseFloat($("#numberOne").val());
+		let numberTwo = parseFloat($("#numberTwo").val());
+		let addition = numberOne + numberTwo;
+		alert(addition);
 	});
 });
 // Da bi imali neke animacije postoji jquery UI
