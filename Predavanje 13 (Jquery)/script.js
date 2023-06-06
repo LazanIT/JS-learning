@@ -23,5 +23,12 @@ $(document).ready(function () {
 	$("#btnHide").click(function () {
 		$("#paragraph").toggle("open"); // pored toggle postoji i slideToggle
 	});
+
+	$("#btnChange").click(function () {
+		$("#paragraphTwo").animate({ paddingTop: "20px", height: "toggle" }, 500);
+	});
 });
 // Da bi imali neke animacije postoji jquery UI
+// Da bi koristili animacije koje nam nudi jquery potrebno je umesto css pisati animate
+// A pre zatvaranja  "  }, 1sekunda );   " poslednje zagrade stavljamo koliko ce animacija trajati
+// Primer:
