@@ -16,17 +16,17 @@
 		/>
 	</head>
 	<body>
-		<form action="#" class="d-flex flex-column w-25 p-2 gap-2">
+		<form class="d-flex flex-column w-25 p-2 gap-2" id="loginForm">
 			<input
 				type="text"
-				name="#"
+				name=""
 				id="username"
 				placeholder="Unesite vase ime"
 				class="bg-danger border-0"
 			/>
 			<input
 				type="password"
-				name="#"
+				name=""
 				id="password"
 				placeholder="Unesite vasu sifru"
 				class="bg-warning border-0"
@@ -35,12 +35,15 @@
 				Prijavite se
 			</button>
 		</form>
+		<h1 id="loginSuccess" class="d-none"></h1>
+
 		<!--Jquery connection-->
 		<script
 			src="https://code.jquery.com/jquery-3.7.0.min.js"
 			integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
 			crossorigin="anonymous"
 		></script>
+
 		<!-- Custom JavaScript connection -->
 		<script src="script.js"></script>
 		<!-- Boostrap JavaScript & popper connection -->

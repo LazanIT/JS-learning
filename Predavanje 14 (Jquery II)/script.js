@@ -1,6 +1,4 @@
 $(document).ready(function () {
-	// console.log("123");
-
 	let username = "admin";
 	let password = "1234";
 
@@ -15,11 +13,19 @@ $(document).ready(function () {
 			console.log("Ime je validno ");
 		} else {
 			alert("Ime ne postoji");
+			return;
 		}
-		if (password === pass) {
+
+		if (password == pass) {
 			console.log("Sifra je validna");
+			$("#loginForm").addClass("d-none");
+			$("#loginSuccess")
+				.removeClass("d-none")
+				.addClass("d-block")
+				.text("Uspesno ste se ulogovali");
 		} else {
 			alert("Pogresna sifra");
+			return;
 		}
 	});
 });
