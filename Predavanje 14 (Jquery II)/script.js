@@ -8,7 +8,18 @@ $(document).ready(function () {
 
 	btnLogin.click(function () {
 		let name = $("#username").val();
-		let password = $("#password").val();
+		let pass = $("#password").val();
 		console.log(name, password);
+
+		if (username == name) {
+			console.log("Ime je validno ");
+		} else {
+			alert("Ime ne postoji");
+		}
+		if (password === pass) {
+			console.log("Sifra je validna");
+		} else {
+			alert("Pogresna sifra");
+		}
 	});
 });
