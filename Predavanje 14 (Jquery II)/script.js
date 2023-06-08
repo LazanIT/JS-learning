@@ -1,1 +1,3 @@
-console.log("test 132");
+$(document).ready(function () {
+	console.log("123");
+});
