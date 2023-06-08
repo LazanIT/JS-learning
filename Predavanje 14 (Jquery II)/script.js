@@ -7,6 +7,8 @@ $(document).ready(function () {
 	const btnLogin = $("#btnLogin");
 
 	btnLogin.click(function () {
-		console.log("test 123");
+		let name = $("#username").val();
+		let password = $("#password").val();
+		console.log(name, password);
 	});
 });
