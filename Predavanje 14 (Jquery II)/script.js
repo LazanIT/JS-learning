@@ -7,25 +7,28 @@ $(document).ready(function () {
 	btnLogin.click(function () {
 		let name = $("#username").val();
 		let pass = $("#password").val();
-		console.log(name, password);
 
-		if (username == name) {
+		if (name === username) {
 			console.log("Ime je validno ");
 		} else {
-			alert("Ime ne postoji");
-			return;
+			$("#wrongUsername")
+				.removeClass("d-none")
+				.addClass("d-flex")
+				.text("Pogresno ime");
 		}
 
-		if (password == pass) {
+		if (pass === password) {
 			console.log("Sifra je validna");
 			$("#loginForm").addClass("d-none");
 			$("#loginSuccess")
 				.removeClass("d-none")
-				.addClass("d-block")
+				.addClass("d-flex")
 				.text("Uspesno ste se ulogovali");
 		} else {
-			alert("Pogresna sifra");
-			return;
+			$("#wrongPassword")
+				.removeClass("d-none")
+				.addClass("d-block")
+				.text("Pogresna sifra");
 		}
 	});
 });
