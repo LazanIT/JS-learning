@@ -59,5 +59,10 @@ $(document).ready(function () {
 			height: heightBox,
 			backgroundColor: selectColor,
 		});
+
+		$("#color").on("input", function () {
+			let secondColor = $(this).val();
+			box.css({ backgroundColor: secondColor });
+		});
 	});
 });
