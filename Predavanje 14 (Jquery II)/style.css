@@ -2,7 +2,14 @@
 	margin: 0;
 	padding: 0;
 }
-.btn:hover{
-    transform: translateY(2px);
-    transition: 0.4s ease-in-out;
+.btn:hover {
+	transform: translateY(2px);
+	transition: 0.4s ease-in-out;
+}
+input {
+	border-radius: 10px;
+    transition: 0.4s linear;
+}
+input:hover{
+    transform: scaleY(1.1);
 }
