@@ -9,7 +9,7 @@ $(document).ready(function () {
 		let pass = $("#password").val();
 
 		if (name === username) {
-			console.log("Ime je validno ");
+			$("#wrongUsername").removeClass("d-flex").addClass("d-none");
 		} else {
 			$("#wrongUsername")
 				.removeClass("d-none")
@@ -17,13 +17,15 @@ $(document).ready(function () {
 				.text("Pogresno ime");
 		}
 
-		if (pass === password) {
-			console.log("Sifra je validna");
+		if (password === pass) {
+			$("#wrongPassword").removeClass("d-flex").addClass("d-none");
 			$("#loginForm").addClass("d-none");
 			$("#loginSuccess")
 				.removeClass("d-none")
 				.addClass("d-flex")
 				.text("Uspesno ste se ulogovali");
+		} else if (pass == "") {
+			alert("Ne moze biti prazno polje");
 		} else {
 			$("#wrongPassword")
 				.removeClass("d-none")
