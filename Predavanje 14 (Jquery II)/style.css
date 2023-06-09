@@ -13,3 +13,6 @@ input {
 input:hover{
     transform: scaleY(1.1);
 }
+body{
+    height: 100vh;
+}

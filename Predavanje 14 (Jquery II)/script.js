@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	// First exercise (Login form)
 	let username = "admin";
 	let password = "1234";
 	let loginAttempts = 0;
@@ -44,5 +45,14 @@ $(document).ready(function () {
 				alert("Premašili ste broj dozvoljenih pokušaja. Polja su isključena.");
 			}
 		}
+	});
+	// Second exercise (Dimension)
+	const btnDimension = $("#btnDimension");
+	btnDimension.click(function () {
+		let box = $("#box");
+		let widthBox = $("#width").val();
+		let heightBox = $("#height").val();
+
+		box.css({ width: widthBox, height: heightBox });
 	});
 });
