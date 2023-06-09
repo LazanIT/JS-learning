@@ -7,7 +7,7 @@
 	transition: 0.4s ease-in-out;
 }
 input {
-	border-radius: 10px;
+	border-radius: 5px;
     transition: 0.4s linear;
 }
 input:hover{

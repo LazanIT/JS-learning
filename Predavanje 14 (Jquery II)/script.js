@@ -52,7 +52,12 @@ $(document).ready(function () {
 		let box = $("#box");
 		let widthBox = $("#width").val();
 		let heightBox = $("#height").val();
+		let selectColor = $("#color").val();
 
-		box.css({ width: widthBox, height: heightBox });
+		box.css({
+			width: widthBox,
+			height: heightBox,
+			backgroundColor: selectColor,
+		});
 	});
 });
