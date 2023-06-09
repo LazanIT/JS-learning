@@ -65,4 +65,35 @@ $(document).ready(function () {
 			box.css({ backgroundColor: secondColor });
 		});
 	});
+	// Updated version (homework)
+	const box = $("#box");
+	const widthInput = $("#width");
+	const heightInput = $("#height");
+	const colorInput = $("#color");
+	const borderRadiusInput = $("#borderRadius");
+
+	// Promena boje pri unosu nove vrijednosti u polje za boju
+	colorInput.on("input", function () {
+		const color = $(this).val();
+		box.css("background-color", color);
+	});
+
+	// Promena dimenzija pri unosu nove vrijednosti u polja za širinu i visinu
+	widthInput.on("input", updateDimensions);
+	heightInput.on("input", updateDimensions);
+
+	function updateDimensions() {
+		const width = widthInput.val();
+		const height = heightInput.val();
+		box.css({
+			width: width,
+			height: height,
+		});
+	}
+
+	// Promena border radijusa pri unosu nove vrijednosti u polje za border radijus
+	borderRadiusInput.on("input", function () {
+		const borderRadius = $(this).val() + "%";
+		box.css("border-radius", borderRadius);
+	});
 });
