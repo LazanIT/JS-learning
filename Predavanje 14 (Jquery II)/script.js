@@ -16,6 +16,8 @@ $(document).ready(function () {
 				.removeClass("d-none")
 				.addClass("d-flex")
 				.text("Pogrešno ime");
+			loginAttempts++;
+			return;
 		}
 
 		if (password === pass) {
@@ -35,7 +37,7 @@ $(document).ready(function () {
 
 			loginAttempts++;
 
-			if (loginAttempts >= 3) {
+			if (loginAttempts >= 5) {
 				$("#username").prop("disabled", true);
 				$("#password").prop("disabled", true);
 				$("#btnLogin").prop("disabled", true);
