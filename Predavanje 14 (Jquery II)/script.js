@@ -1,6 +1,7 @@
 $(document).ready(function () {
 	let username = "admin";
 	let password = "1234";
+	let loginAttempts = 0;
 
 	const btnLogin = $("#btnLogin");
 
@@ -14,7 +15,7 @@ $(document).ready(function () {
 			$("#wrongUsername")
 				.removeClass("d-none")
 				.addClass("d-flex")
-				.text("Pogresno ime");
+				.text("Pogrešno ime");
 		}
 
 		if (password === pass) {
@@ -23,14 +24,23 @@ $(document).ready(function () {
 			$("#loginSuccess")
 				.removeClass("d-none")
 				.addClass("d-flex")
-				.text("Uspesno ste se ulogovali");
-		} else if (pass == "") {
-			alert("Ne moze biti prazno polje");
+				.text("Uspješno ste se ulogovali");
+		} else if (pass === "") {
+			alert("Ne može biti prazno polje");
 		} else {
 			$("#wrongPassword")
 				.removeClass("d-none")
 				.addClass("d-block")
-				.text("Pogresna sifra");
+				.text("Pogrešna šifra");
+
+			loginAttempts++;
+
+			if (loginAttempts >= 3) {
+				$("#username").prop("disabled", true);
+				$("#password").prop("disabled", true);
+				$("#btnLogin").prop("disabled", true);
+				alert("Premašili ste broj dozvoljenih pokušaja. Polja su isključena.");
+			}
 		}
 	});
 });
