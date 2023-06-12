@@ -1,0 +1,7 @@
+Pozive na internetu koje imamo su:
+1: GET = https://reqres.in/api/users?page=2
+2: POST = https://reqres.in/api/users
+3: DELETE 
+4: PATCH
+
+Sa GET metodom prikazuju se podaci, dok kada koristimo POST metodu ne prikazuju se podaci i uglavnom se POST koristi kada radimo sa poverljivim podacima
