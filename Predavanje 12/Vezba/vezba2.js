@@ -4,7 +4,7 @@ const showCity = document.getElementById("showCity");
 
 const cities = [];
 addCity.addEventListener("click", function click() {
-	var object = prompt("Type here ur city");
+	let object = prompt("Type here ur city");
 	object = object.split(" ");
 	cities.push(object);
 });
