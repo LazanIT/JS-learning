@@ -2,6 +2,8 @@
 
 $(document).ready(function () {
 	// Koriscenje AJAX-a :
+	// API radi po sistemu asinhronosti
+	// To znaci da on poziva API, ali ne ceka odgovor odma nego iscitava sve ostale podatke van ajax-a koje smo napravili/ispisali
 	$.ajax({
 		url: "https://reqres.in/api/users?page=2",
 		method: "GET",
@@ -24,6 +26,17 @@ $(document).ready(function () {
 		method: "GET",
 		success: function (singleInformation) {
 			console.log(singleInformation["data"]);
+		},
+	});
+
+	// Homework :
+	$.ajax({
+		url: "https://www.7timer.info/bin/astro.php?lon=113.2&lat=23.1&ac=0&unit=metric&output=json&tzshift=0",
+		method: "GET",
+		success: function (weather) {
+			console.log(weather);
+			const weatherHTML = $("#weather");
+			weatherHTML.text(JSON.stringify(weather["dataseries"]));
 		},
 	});
 });
