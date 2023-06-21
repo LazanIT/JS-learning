@@ -14,3 +14,4 @@ $(document).ready(function () {
 //    aqi: "yes"
 //}
 // I on ce nama napraviti adresu kao sto je u URL
+// Exercise 1: ( Select city and call weatherAPI )
