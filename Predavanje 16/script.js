@@ -38,8 +38,20 @@ $(document).ready(function () {
 			},
 		});
 	});
-	// Third exercise 
-	
+	// Third exercise
+	const btnHistory = $("#btnHistory");
+	$(btnHistory).click(function () {
+		let cityValue = $(city).val();
+		$.ajax({
+			method: "GET",
+			url: "http://api.weatherapi.com/v1/history.json",
+			data: {
+				key: "410dcd3850ec4b00a26194551232106",
+				q: cityValue,
+				dt: "2010-01-01",
+			},
+		});
+	});
 });
 // Takodje url se moze pisati i na ovaj nacin :
 // data :{
