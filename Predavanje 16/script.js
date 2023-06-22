@@ -38,6 +38,8 @@ $(document).ready(function () {
 			},
 		});
 	});
+	// Third exercise 
+	
 });
 // Takodje url se moze pisati i na ovaj nacin :
 // data :{
