@@ -1,10 +1,21 @@
 $(document).ready(function () {
-	$.ajax({
-		method: "GET",
-		url: "http://api.weatherapi.com/v1/current.json?key=410dcd3850ec4b00a26194551232106 &q=Belgrade&aqi=yes",
-		success: function (response) {
-			console.log(response);
-		},
+	const city = $("#City");
+	$(city).change(function () {
+		let cityValue = $(this).val();
+		console.log(cityValue);
+
+		$.ajax({
+			method: "GET",
+			url: "http://api.weatherapi.com/v1/current.json",
+			data: {
+				key: "410dcd3850ec4b00a26194551232106",
+				q: cityValue,
+				aqi: "yes",
+			},
+			success: function (response) {
+				console.log(response);
+			},
+		});
 	});
 });
 // Takodje url se moze pisati i na ovaj nacin :
