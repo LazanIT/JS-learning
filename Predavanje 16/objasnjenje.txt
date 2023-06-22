@@ -1,0 +1,3 @@
+Razlog zasto ne mozemo da koristimo HISTORY od API-ja je zato sto je 
+nas nalog limitiran, i ne poseduje za prethodne godine
+Ali je FREE da radi za par dana u nazad

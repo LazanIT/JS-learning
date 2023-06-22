@@ -48,7 +48,11 @@ $(document).ready(function () {
 			data: {
 				key: "410dcd3850ec4b00a26194551232106",
 				q: cityValue,
-				dt: "2010-01-01",
+				dt: "2023-06-20",
+				days: "3",
+			},
+			success: function (response) {
+				console.log(response);
 			},
 		});
 	});
