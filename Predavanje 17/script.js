@@ -5,5 +5,7 @@ $(document).ready(function (param) {
 
 	$(btnCart).click(function (param) {
 		console.dir("Succes");
+		const price = $(this).attr("data-price");
+		console.log(price);
 	});
 });
