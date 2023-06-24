@@ -8,6 +8,10 @@ $(document).ready(function (param) {
 		const price = $(this).attr("data-price");
 		console.log(price);
 		// local Storage
-		localStorage.setItem("cart", price); // Prvo definisemo kljuc: Primer kako ce se zvati ta korpa ili nesto slicno, a zatim value u ovo slucaju cenu
+
+		let currentCart = localStorage.getItem("cart");
+		let totalCart = parseInt(currentCart) + parseInt(price);
+		console.log(totalCart);
+		localStorage.setItem("cart", totalCart); // Prvo definisemo kljuc: Primer kako ce se zvati ta korpa ili nesto slicno, a zatim value u ovo slucaju cenu
 	});
 });
