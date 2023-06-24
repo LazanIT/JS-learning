@@ -7,5 +7,7 @@ $(document).ready(function (param) {
 		console.dir("Succes");
 		const price = $(this).attr("data-price");
 		console.log(price);
+		// local Storage
+		localStorage.setItem("cart", price);
 	});
 });
