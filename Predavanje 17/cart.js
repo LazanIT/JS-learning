@@ -14,3 +14,5 @@ $(document).ready(function () {
 		h1.html("Korpa je prazna");
 	});
 });
+// U vecini slucajeva se koristi session
+// Storage koji se gasi kada se zatvori storage i koristi se za cookies i reklame
