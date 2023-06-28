@@ -15,3 +15,5 @@ $(document).ready(function (param) {
 		localStorage.setItem("cart", totalCart); // Prvo definisemo kljuc: Primer kako ce se zvati ta korpa ili nesto slicno, a zatim value u ovo slucaju cenu
 	});
 });
+
+

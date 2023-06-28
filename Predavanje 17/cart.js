@@ -7,4 +7,10 @@ $(document).ready(function () {
 	} else {
 		h1.html(buyCart);
 	}
+
+	const btnClear = $("#clearBtn");
+	$(btnClear).click(function () {
+		localStorage.removeItem("cart");
+		h1.html("Korpa je prazna");
+	});
 });
