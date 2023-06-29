@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+}
+#main-container {
+	background-color: #f29484;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+button {
+	background: transparent;
+	border: 2px solid gray;
+	padding: 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	color: aqua;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+button:focus {
+	outline: none; /* Ovaj atribut se koristi za stilizovanje elemente kada je on " Fokusiran " odnosno kada je izabran za interakciju sa njim */
+}
