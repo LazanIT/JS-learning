@@ -8,6 +8,7 @@ body {
 	background-image: url("img/bg.jpg");
 	font-family: sans-serif;
 	color: white;
+	height: 100vh;
 }
 
 h1 {
@@ -58,4 +59,11 @@ h3 {
 .new-value {
 	margin-top: 20px;
 	font-size: 20px;
+}
+.custom-height{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
