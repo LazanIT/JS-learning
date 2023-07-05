@@ -52,3 +52,26 @@ console.log(rezultat);
 
 // Da bi dobili kojeg su tipa nase varijable koristimo  :
 console.log(typeof number);
+
+// Nekad ce se desiti da cemo broj dobiti pod navodnicima ( " 5 " )
+// Da bi pretvorili string u integer koristimo parseInt funkciju
+// Primer :
+
+let numberOne = 5; // Integer
+let numberTwo = "5"; // String
+numberTwo = parseInt(numberTwo); // Pomocu ove linije smo ga pretvorili u integer
+let addition = numberOne + numberTwo;
+console.log(addition);
+
+// Deklaracija pomocu CONST
+// Const je ustvari konstanta, i ne mozemo da je zovemo varijabla zato sto nije promenljiva
+// Ako ne planiramo da menjamo nas kod i znamo da ce ostati takav onda koristimo CONST
+
+/* Pravila kada dajemo imena varijablama :
+    1: Ne sme da bude odvojeno
+    2: Moze da ima donju crtu ili crticu
+    3: Ne sme da pocinje sa brojem 
+    4: Mozemo sa $
+    5: Unutar varijable mozemo da imamo brojeve ili znakove 
+    6: Osetljive su na velika i mala slova 
+*/
