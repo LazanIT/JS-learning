@@ -27,5 +27,28 @@ messageDiv.innerText = "Pozdrav";
     ..
 */
 
-// Deklarisanje  varijabli :
+// Deklarisanje varijabli :
+/* 
+Varijable koje postoje :
+1: LET
+2: CONST 
+3: VAR - koji se slabo koristi danas i bas je redak
+ */
 
+let test;
+// Dodaljivanje vrednosti varijabli :
+test = "Pozdrav svima testiram varijable"; // Inicijalizacija
+/*Takodje sve to mozemo raditi u jednom redu :
+ let test = "Pozdrav svima testiram varijablu";
+*/
+console.log(test);
+
+let years = 5; // integer
+console.log(years);
+
+let number = 5.1; // float
+let rezultat = years + number;
+console.log(rezultat);
+
+// Da bi dobili kojeg su tipa nase varijable koristimo  :
+console.log(typeof number);
