@@ -74,4 +74,21 @@ console.log(addition);
     4: Mozemo sa $
     5: Unutar varijable mozemo da imamo brojeve ili znakove 
     6: Osetljive su na velika i mala slova 
+    7: Davati logican naziv kako bi posle mogli da ih razumemo, ili neko drugi ko bude radio na nasem kodu
 */
+
+// Primer ispisivanja recenice pomocu varijabli
+let ime = "Laza";
+let prezime = "Maza";
+let godine = 11;
+
+console.log(
+	"Moje ime je " +
+		ime +
+		" " +
+		"Prezivam se " +
+		prezime +
+		" " +
+		"i imam " +
+		godine
+);
