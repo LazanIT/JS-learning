@@ -92,5 +92,20 @@ console.log(
 		"i imam " +
 		godine
 );
-// + je nadodavanje kada su string i number, a kada su number i number onda je sabiranje 
-// Takodje sve to mi mozemo staviti samo u jednu varijablu i posle console.log tu varijablu 
+// + je nadodavanje kada su string i number, a kada su number i number onda je sabiranje
+// Takodje sve to mi mozemo staviti samo u jednu varijablu i posle console.log tu varijablu
+
+godine++; // Pomocu ove linije povecavamo godine za 1 ( godine + 1 )
+godine--; // Pomocu ove linije smanjujemo godine za 1 ( godine - 1 )
+
+/*
+    Pomocu -= smanjujemo za neki broj
+    Pomocu *= mnozimo za neki broj
+    Pomocu += uvecavamo za neki broj
+    Primer:
+    godine += 2 --> Uvecali smo godine za 2 
+*/
+
+// Drugi nacin na koji mozemo pisati recenice a da ne moramo da izlazimo iz navodnika i dodajemo svaki put + je pomocu backtikova :
+
+console.log(`Moje ime je ${ime} i imam ${godine} godina`); // = console.log("Moje ime je " + ime + " " + "Prezivam se " + prezime + " " + "i imam " + godine
