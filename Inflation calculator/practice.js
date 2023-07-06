@@ -92,3 +92,5 @@ console.log(
 		"i imam " +
 		godine
 );
+// + je nadodavanje kada su string i number, a kada su number i number onda je sabiranje 
+// Takodje sve to mi mozemo staviti samo u jednu varijablu i posle console.log tu varijablu 
