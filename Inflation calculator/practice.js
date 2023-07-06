@@ -109,3 +109,29 @@ godine--; // Pomocu ove linije smanjujemo godine za 1 ( godine - 1 )
 // Drugi nacin na koji mozemo pisati recenice a da ne moramo da izlazimo iz navodnika i dodajemo svaki put + je pomocu backtikova :
 
 console.log(`Moje ime je ${ime} i imam ${godine} godina`); // = console.log("Moje ime je " + ime + " " + "Prezivam se " + prezime + " " + "i imam " + godine
+
+// I to je najprakticniji nacin koji se koristi
+
+// Logicki operatori : <, >, ==, &&, ||
+
+// Uslovi : if, switch
+
+let number_One = 5;
+let number_Two = 10;
+
+if (number_One < number_Two) {
+	console.log("Prvi broj je manji od drugog broja");
+} else {
+	console.log("Prvi broj je veci");
+}
+
+// Drugi primer :
+let time = 20;
+
+if (time < 11) {
+	console.log("Dobro Jutro");
+} else if (time < 20 && time > 10) {
+	console.log("Dobar dan");
+} else {
+	console.log("Dobro vece");
+}
