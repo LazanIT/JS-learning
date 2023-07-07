@@ -178,3 +178,20 @@ switch (month) {
 		console.log("Decembar");
 		break;
 }
+
+// LOOPS - Petlje
+// One sluze da se odredjeni deo koda ponavlja sve dok se njihovi uslovi ne ispune
+// Primer : Brojac novcanica :
+
+let dolar = 25; // 25 dolara
+let dolar_value = 10; // 10 dolara
+let counter = 0;
+let countedDolar = 0;
+
+// WHILE loop :
+while (counter < 25) {
+	countedDolar++;
+
+	counter++;
+	console.log(countedDolar);
+}
