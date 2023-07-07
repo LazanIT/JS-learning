@@ -195,3 +195,5 @@ while (counter < 25) {
 	counter++;
 	console.log(countedDolar);
 }
+
+// Petlje i nizovi
