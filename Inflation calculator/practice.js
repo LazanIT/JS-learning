@@ -197,3 +197,10 @@ while (counter < 25) {
 }
 
 // Petlje i nizovi
+
+let money = [10, 5, 20, 50, 5, 10, 100, 20, 50, 5, 10];
+let countedArray = 0;
+while (countedArray < 11) {
+	countedArray++;
+}
+console.log(countedArray);
