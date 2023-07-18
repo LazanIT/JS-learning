@@ -198,9 +198,10 @@ while (counter < 25) {
 
 // Petlje i nizovi
 
-let money = [10, 5, 20, 50, 5, 10, 100, 20, 50, 5, 10];
+let money = [10, 5, 20, 50, 5, 10, 100, 20, 50, 5, 10, 11];
 let countedArray = 0;
-while (countedArray < 11) {
+while (countedArray < money.length) {
+	// Pomocu lenght uzimamo duzinu niza
 	countedArray++;
 }
-console.log(countedArray);
+console.log(`Broj izbrojanih novcanica je ${countedArray}`);
