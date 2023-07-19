@@ -205,3 +205,13 @@ while (countedArray < money.length) {
 	countedArray++;
 }
 console.log(`Broj izbrojanih novcanica je ${countedArray}`);
+
+// Pristupanje indexima niza:
+
+console.log(money[1]); // Pomocu ove linije koda pristupili smo clanu koji nosi index-ni broj 1
+
+// Ispisivanje clanova niza
+
+for (let i = 0; i < money.length; i++) {
+	console.log(money[i]);
+}
