@@ -213,5 +213,6 @@ console.log(money[1]); // Pomocu ove linije koda pristupili smo clanu koji nosi 
 // Ispisivanje clanova niza
 
 for (let i = 0; i < money.length; i++) {
-	console.log(money[i]);
+	
+	console.log(`Novcanica na poziciji ${i} : ${money[i]}`);
 }
