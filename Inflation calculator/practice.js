@@ -198,7 +198,7 @@ while (counter < 25) {
 
 // Petlje i nizovi
 
-let money = [10, 5, 20, 50, 5, 10, 100, 20, 50, 5, 10, 11];
+let money = [10, 5, 20, 50, 5, 10, 100, 20, 50, 5, 10, 100];
 let countedArray = 0;
 while (countedArray < money.length) {
 	// Pomocu lenght uzimamo duzinu niza
@@ -211,8 +211,28 @@ console.log(`Broj izbrojanih novcanica je ${countedArray}`);
 console.log(money[1]); // Pomocu ove linije koda pristupili smo clanu koji nosi index-ni broj 1
 
 // Ispisivanje clanova niza
+// FOR loop: 
 
-for (let i = 0; i < money.length; i++) {
+let sumOfMoney = 0;
+
+for (let i = 0; i < money.length; i++) { // Prvi nacin FOR petlje
 	
 	console.log(`Novcanica na poziciji ${i} : ${money[i]}`);
+
+	sumOfMoney = sumOfMoney + money[i];
 }
+
+console.log(`Ukupno imamo: ${sumOfMoney} dolara`);
+
+// Drugi nacin FOR petlje :
+
+console.log("###############")
+
+for (let dolar in money){
+	console.log(`Novcanica na poziciji ${dolar} : ${money[dolar]}`);
+
+	sumOfMoney = sumOfMoney + money[dolar];
+}
+console.log(`Ukupno imamo: ${sumOfMoney} dolara`);
+
+// Ovde imamo identican kod samo na dva razlicita nacina
