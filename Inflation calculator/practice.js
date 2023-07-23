@@ -260,3 +260,18 @@ cars.forEach(function(car){
 });
 
 // Object & Loops
+// Razlika Objekata u odnosu na nizove je u zagradama 
+// Objekat {} ---- Niz []
+let carModel = {
+	// Da bi stavili vise informacija za svaki auto napravimo niz :
+	audi : ["70000", "A4", "2018"],
+	bmw : ["50000", "f30", "2020"],
+	golf : ["100000", "7.5", "2016"]
+	
+};
+
+for(model in carModel){
+	let data_car = carModel[model];
+	let name_car = model;
+	console.log(`Automobil pod nazivom ${name_car} ima podatke ${data_car}`)
+}
