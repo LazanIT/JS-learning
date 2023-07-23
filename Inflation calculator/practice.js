@@ -252,3 +252,11 @@ let cars = [
 for (let car of cars){
 	console.warn(car)
 }
+
+// ForEach loop :
+
+cars.forEach(function(car){
+	console.error(car);
+});
+
+// Object & Loops
