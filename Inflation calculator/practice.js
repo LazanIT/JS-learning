@@ -275,3 +275,13 @@ for(model in carModel){
 	let name_car = model;
 	console.log(`Automobil pod nazivom ${name_car} ima podatke ${data_car}`)
 }
+
+// Jos jedan primer objekata i pristupanja njegovim podacima :
+
+let osoba = {
+	ime : ["Aleksandar"],
+	prezime : ["Lazanski"],
+	godiste : ["2003"]
+}
+
+console.log(`Moje ime je : ${osoba.ime} a prezivam se ${osoba.prezime} i rodjen sam ${osoba.godiste} godine`);
