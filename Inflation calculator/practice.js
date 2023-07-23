@@ -242,3 +242,13 @@ console.log(`Ukupno imamo: ${sumOfMoney} dolara`);
 for (let euro of money){
 	console.log(euro) // Ovde ispisujemo vrednost niza na jos prostiji nacin 
 }
+
+// Primer broj 2 :
+
+let cars = [
+	"AUDI", "BMW", "GOLF"
+]
+
+for (let car of cars){
+	console.warn(car)
+}
