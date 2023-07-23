@@ -236,3 +236,9 @@ for (let dolar in money){
 console.log(`Ukupno imamo: ${sumOfMoney} dolara`);
 
 // Ovde imamo identican kod samo na dva razlicita nacina
+
+// Ova druga petlja se moze napisati na jos jednostavniji nacin :
+
+for (let euro of money){
+	console.log(euro) // Ovde ispisujemo vrednost niza na jos prostiji nacin 
+}
