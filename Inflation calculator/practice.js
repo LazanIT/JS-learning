@@ -211,12 +211,13 @@ console.log(`Broj izbrojanih novcanica je ${countedArray}`);
 console.log(money[1]); // Pomocu ove linije koda pristupili smo clanu koji nosi index-ni broj 1
 
 // Ispisivanje clanova niza
-// FOR loop: 
+// FOR loop:
 
 let sumOfMoney = 0;
 
-for (let i = 0; i < money.length; i++) { // Prvi nacin FOR petlje
-	
+for (let i = 0; i < money.length; i++) {
+	// Prvi nacin FOR petlje
+
 	console.log(`Novcanica na poziciji ${i} : ${money[i]}`);
 
 	sumOfMoney = sumOfMoney + money[i];
@@ -226,9 +227,9 @@ console.log(`Ukupno imamo: ${sumOfMoney} dolara`);
 
 // Drugi nacin FOR petlje :
 
-console.log("###############")
+console.log("###############");
 
-for (let dolar in money){
+for (let dolar in money) {
 	console.log(`Novcanica na poziciji ${dolar} : ${money[dolar]}`);
 
 	sumOfMoney = sumOfMoney + money[dolar];
@@ -239,49 +240,61 @@ console.log(`Ukupno imamo: ${sumOfMoney} dolara`);
 
 // Ova druga petlja se moze napisati na jos jednostavniji nacin :
 
-for (let euro of money){
-	console.log(euro) // Ovde ispisujemo vrednost niza na jos prostiji nacin 
+for (let euro of money) {
+	console.log(euro); // Ovde ispisujemo vrednost niza na jos prostiji nacin
 }
 
 // Primer broj 2 :
 
-let cars = [
-	"AUDI", "BMW", "GOLF"
-]
+let cars = ["AUDI", "BMW", "GOLF"];
 
-for (let car of cars){
-	console.warn(car)
+for (let car of cars) {
+	console.warn(car);
 }
 
 // ForEach loop :
 
-cars.forEach(function(car){
+cars.forEach(function (car) {
 	console.error(car);
 });
 
 // Object & Loops
-// Razlika Objekata u odnosu na nizove je u zagradama 
+// Razlika Objekata u odnosu na nizove je u zagradama
 // Objekat {} ---- Niz []
 let carModel = {
 	// Da bi stavili vise informacija za svaki auto napravimo niz :
-	audi : ["70000", "A4", "2018"],
-	bmw : ["50000", "f30", "2020"],
-	golf : ["100000", "7.5", "2016"]
-	
+	audi: ["70000", "A4", "2018"],
+	bmw: ["50000", "f30", "2020"],
+	golf: ["100000", "7.5", "2016"],
 };
 
-for(model in carModel){
+for (model in carModel) {
 	let data_car = carModel[model];
 	let name_car = model;
-	console.log(`Automobil pod nazivom ${name_car} ima podatke ${data_car}`)
+	console.log(`Automobil pod nazivom ${name_car} ima podatke ${data_car}`);
 }
 
 // Jos jedan primer objekata i pristupanja njegovim podacima :
 
 let osoba = {
-	ime : ["Aleksandar"],
-	prezime : ["Lazanski"],
-	godiste : ["2003"]
-}
+	ime: ["Aleksandar"],
+	prezime: ["Lazanski"],
+	godiste: ["2003"],
+};
 
-console.log(`Moje ime je : ${osoba.ime} a prezivam se ${osoba.prezime} i rodjen sam ${osoba.godiste} godine`);
+console.log(
+	`Moje ime je : ${osoba.ime} a prezivam se ${osoba.prezime} i rodjen sam ${osoba.godiste} godine`
+);
+
+// Funkcije
+
+let nekretnine = {
+	stan: 70000,
+	kuca: 150000,
+	plac: 30000,
+};
+
+let mesec = 10 * 12;
+let rata = nekretnine.stan / mesec;
+
+console.log(`Rata za stan ce izaci ${rata} eura na ${mesec} meseci`);
