@@ -299,3 +299,17 @@ let rata = nekretnine.stan / mesec;
 rata = rata.toFixed(2); // Pomocu ove linije koda smo zaokruzili na dve decimale
 
 console.log(`Rata za stan ce izaci ${rata} eura na ${mesec} meseci`);
+// Kako ne bi ponavljali kod za svaku od nekretnina koristicemo funkciju za izracunavanje
+// Jedna veoma bitna stavka je da je objekat iznad same funkcije
+// U suprotnom cemo dobijati gresku
+
+function izracunavanjeNekretnina(godineRate, vrstaNekretnine) {
+	let meseci = godineRate * 12;
+	let rata = nekretnine[vrstaNekretnine] / meseci;
+
+	rata = rata.toFixed(3); // Zaokruzili smo na 3 decimale
+
+	console.log(rata);
+}
+
+izracunavanjeNekretnina(15, "stan");
