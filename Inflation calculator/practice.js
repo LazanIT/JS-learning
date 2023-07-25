@@ -296,5 +296,6 @@ let nekretnine = {
 
 let mesec = 10 * 12;
 let rata = nekretnine.stan / mesec;
+rata.toFixed(2); // Pomocu ove linije koda smo zaokruzili na dve decimale
 
 console.log(`Rata za stan ce izaci ${rata} eura na ${mesec} meseci`);
