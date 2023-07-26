@@ -303,13 +303,23 @@ console.log(`Rata za stan ce izaci ${rata} eura na ${mesec} meseci`);
 // Jedna veoma bitna stavka je da je objekat iznad same funkcije
 // U suprotnom cemo dobijati gresku
 
+/*
+	Ova funkcija izracunava mesecnu ratu za odredjenu nekretninu
+	Na odredjeni broj godine
+*/
+
 function izracunavanjeNekretnina(godineRate, vrstaNekretnine) {
 	let meseci = godineRate * 12;
 	let rata = nekretnine[vrstaNekretnine] / meseci;
 
 	rata = rata.toFixed(3); // Zaokruzili smo na 3 decimale
 
-	console.log(rata);
+	console.log(
+		`Rata za ${vrstaNekretnine} ce izaci ${rata} eura na ${mesec} meseci`
+	);
+	console.log("------------");
 }
 
 izracunavanjeNekretnina(15, "stan");
+izracunavanjeNekretnina(20, "kuca");
+izracunavanjeNekretnina(30, "plac");
