@@ -323,3 +323,20 @@ function izracunavanjeNekretnina(godineRate, vrstaNekretnine) {
 izracunavanjeNekretnina(15, "stan");
 izracunavanjeNekretnina(20, "kuca");
 izracunavanjeNekretnina(30, "plac");
+
+// Uzimanje elemenata koji nemaju klasu ili id
+
+let brend = document.getElementsByTagName("span");
+
+console.log(brend[0].innerText);
+
+for (let i = 0; i < brend.length; i++) {
+	console.error(brend[i].innerText);
+}
+
+for (let marka of brend) {
+	console.log(marka.innerText);
+}
+
+// Kada ide of kod for petlje onda pisemo samo ono sto smo definisali sa let
+// A kada ide in pisemo : brend[marka]
