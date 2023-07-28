@@ -350,3 +350,11 @@ console.log(modelAuta);
 for (let modelKola of modelAuta) {
 	console.log(modelKola.innerText);
 }
+
+console.log("--------------");
+
+let najbolji = document.getElementById("recenica");
+
+// Kada su ID-jevi u pitanju JS nikad ne pravi niz
+
+console.log(najbolji.innerText);
