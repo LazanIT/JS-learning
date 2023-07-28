@@ -340,3 +340,13 @@ for (let marka of brend) {
 
 // Kada ide of kod for petlje onda pisemo samo ono sto smo definisali sa let
 // A kada ide in pisemo : brend[marka]
+
+console.log("--------------");
+
+let modelAuta = document.getElementsByClassName("automobil-model");
+
+console.log(modelAuta);
+
+for (let modelKola of modelAuta) {
+	console.log(modelKola.innerText);
+}
