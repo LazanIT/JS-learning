@@ -382,3 +382,9 @@ for (let marka_Auta of model_Auta) {
 }
 
 // Kao u CSS-U sto selektujemo klase i id, tako i ovde selektujemo kada koristimo querySelector-e
+
+// Brisanje recenice pomocu JavaScript-e
+
+let najbolja_recenica = document.querySelector("#recenica");
+
+najbolja_recenica.remove();
