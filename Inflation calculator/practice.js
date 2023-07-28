@@ -358,3 +358,27 @@ let najbolji = document.getElementById("recenica");
 // Kada su ID-jevi u pitanju JS nikad ne pravi niz
 
 console.log(najbolji.innerText);
+
+console.log("--------------");
+
+// Takodje sve ovo mozemo raditi i preko document.querySelector("");
+// Za klase u zagradu stavljamo : .
+// Za ID u zagradu stavljamo : #
+// A za uzimanje elementa (Primer):
+
+let brend_Auta = document.querySelectorAll("span");
+for (let modelKola of brend_Auta) {
+	console.log(modelKola.innerText);
+}
+
+console.log("--------------");
+
+// Primer za klasu :
+
+let model_Auta = document.querySelectorAll(".automobil-model");
+
+for (let marka_Auta of model_Auta) {
+	console.log(marka_Auta.innerText);
+}
+
+// Kao u CSS-U sto selektujemo klase i id, tako i ovde selektujemo kada koristimo querySelector-e
