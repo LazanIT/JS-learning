@@ -388,3 +388,22 @@ for (let marka_Auta of model_Auta) {
 let najbolja_recenica = document.querySelector("#recenica");
 
 najbolja_recenica.remove();
+
+// Pravljenje novog elementa
+
+let novi_element = document.createElement("h2");
+
+console.log(novi_element);
+
+// Dodavanje klasa elementu :
+
+novi_element.classList = "novi-element";
+
+// Dodavanje texta elementu
+
+novi_element.innerText = "Pozdrav iz novog elementa";
+
+// Implementiranje u html
+
+let body = document.querySelector("body");
+body.appendChild(novi_element);
