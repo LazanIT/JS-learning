@@ -54,6 +54,13 @@ h3 {
 	background-color: orange;
 	cursor: pointer;
 	border-radius: 10px;
+	transition: .4s linear;
+}
+.container button:hover{
+	border-radius: 20px;
+	background-color: chocolate;
+	color: white;
+	transform: scale(1.1);
 }
 
 .new-value {
