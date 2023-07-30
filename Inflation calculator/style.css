@@ -49,7 +49,10 @@ h3 {
 	background-color: greenyellow;
 	color:black;
 	font-weight: bold;
+	border: none;
+	outline: none;
 }
+
 
 .container button {
 	padding: 10px;
