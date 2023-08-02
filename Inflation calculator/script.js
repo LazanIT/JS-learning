@@ -13,6 +13,12 @@ function inflationCalculator() {
 	// Za DIV smo imali .innerText a posto je ovo input imamo value
 	// console.log(money.value);
 
-	// For percentage
+	// Formula za izracunavanje inflacije.
 	let worth = money + money * (inflationRate / 100);
+
+	for (let i = 1; i < years; i++) {
+		worth += worth * (inflationRate / 100);
+	}
+	worth = worth.toFixed(2);
+	console.log(worth);
 }
