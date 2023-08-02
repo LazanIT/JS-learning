@@ -12,4 +12,7 @@ function inflationCalculator() {
 	// console.log(inflationRate.value);
 	// Za DIV smo imali .innerText a posto je ovo input imamo value
 	// console.log(money.value);
+
+	// For percentage
+	let worth = money + money * (inflationRate / 100);
 }
