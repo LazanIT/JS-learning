@@ -21,4 +21,14 @@ function inflationCalculator() {
 	}
 	worth = worth.toFixed(2);
 	console.log(worth);
+
+	let newElement = document.createElement("h5");
+
+	newElement.className = "new-value";
+
+	newElement.innerText = `Danasnjih ${money} eura vredi isto kao ${worth} eura  za ${years} godina!`;
+
+	let container = document.querySelector(".container");
+
+	container.appendChild(newElement);
 }
