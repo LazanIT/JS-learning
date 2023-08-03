@@ -89,6 +89,14 @@ h3 {
 	margin-top: 10px;
 	height: 30px;
 	font-size: 16px;
+	border-radius: 10px;
+	background-color: burlywood;
+	font-weight: bold;
+	transition: 0.3s ease-in-out;
+}
+.single-item .actions button:hover {
+	transform: translateX(5px);
+	cursor: pointer;
 }
 
 .cart-single-item {
