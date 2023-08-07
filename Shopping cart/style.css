@@ -9,6 +9,7 @@ body {
 	background-size: cover;
 	font-family: sans-serif;
 	padding: 50px;
+	height: 100vh;
 }
 
 h1 {
@@ -23,23 +24,32 @@ h2 {
 h3 {
 	margin-bottom: 15px;
 }
-
+.container-fluid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	flex-direction: column;
+}
 .container {
-	max-width: 800px;
+	max-width: 100%;
 	margin: auto;
 	border: 2px solid brown;
 	border-radius: 30px;
 	display: flex;
 	background-color: rgba(255, 255, 255, 0.3);
+	flex-direction: row;
+	gap: 50px;
 }
 
 .items {
-	width: 60%;
+	width: 80%;
 	padding: 20px;
+	flex-direction: column;
 }
 
 .cart {
-	width: 40%;
+	width: 500px;
 	padding: 20px;
 	border-left: 2px solid brown;
 	background-image: url("img/cart.png");
