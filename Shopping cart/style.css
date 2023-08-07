@@ -92,6 +92,15 @@ h3 {
 	width: 60px;
 	text-align: center;
 	font-size: 18px;
+	background-color: bisque;
+	border: none;
+	transition: 0.4s linear;
+	font-weight: bold;
+}
+.single-item .actions input:focus {
+	outline: none;
+	background-color: blanchedalmond;
+	border-radius: 10px;
 }
 
 .single-item .actions button {
