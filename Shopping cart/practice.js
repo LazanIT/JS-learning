@@ -8,3 +8,8 @@ function pokreniMe(element) {
 	console.log(message);
 }
 // Druga vezba
+// Selektovanje elemenata po dubini se vrsi kao u CSS-u
+function testing() {
+	let linkovi = document.querySelectorAll("section .moj-link"); // Isto kao u css section .moj-link
+	console.log(linkovi);
+}
