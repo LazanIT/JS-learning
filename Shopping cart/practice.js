@@ -1,3 +1,4 @@
+// Prva vezba
 function pokreniMe(element) {
 	let nazivDugmeta = element.innerText;
 	let klasaDugmeta = element.className;
@@ -6,3 +7,4 @@ function pokreniMe(element) {
 	message.innerText = nazivDugmeta + " - " + klasaDugmeta;
 	console.log(message);
 }
+// Druga vezba
