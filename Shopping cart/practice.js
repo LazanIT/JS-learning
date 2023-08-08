@@ -14,3 +14,22 @@ function testing() {
 	let linkovi = document.querySelectorAll("section .moj-link"); // Isto kao u css section .moj-link
 	console.log(linkovi);
 }
+
+// Dobijanje ostalih linkova na osnovu jednog : Primer :
+function testingDva() {
+	let link2 = document.querySelector(".drugi-link");
+	console.log(link2);
+	// To mozemo uraditi pomocu funkcije nextElementSibling :
+	console.log(link2.nextElementSibling);
+	// Takodje mozemo dobiti i prethodni element previousElementSibling :
+	console.log(link2.previousElementSibling);
+
+	// Sada cemo to staviti u varijable kako bi izgledalo lepse i jasnije :
+
+	let link1 = link2.previousElementSibling;
+	let link3 = link2.nextElementSibling;
+
+	console.log(link1.innerText);
+	console.log(link2.innerText);
+	console.log(link3.innerText);
+}
