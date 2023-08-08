@@ -1,5 +1,8 @@
-console.dir("Js radi");
+function pokreniMe(element) {
+	let nazivDugmeta = element.innerText;
 
-function pokreniMe(event) {
-	alert(event);
+	console.log("Kliknuo si me");
+	let message = document.querySelector("#kliknutoDugme");
+	message.innerText = nazivDugmeta;
+	console.log(message);
 }
