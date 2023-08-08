@@ -32,4 +32,12 @@ function testingDva() {
 	console.log(link1.innerText);
 	console.log(link2.innerText);
 	console.log(link3.innerText);
+
+	// Dobijanje najblizeg elementa na osnovu datog :
+	let text = document.querySelector(".text");
+
+	console.log(text.closest("div"));
+
+	// Funkcija " closest  " radi tako sto daje najblizi element naseg datog elementa
+	// A takodje moze dati i najblizi element sa odredjenom klasom
 }
