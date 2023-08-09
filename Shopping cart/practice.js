@@ -32,7 +32,8 @@ function testingDva() {
 	console.log(link1.innerText);
 	console.log(link2.innerText);
 	console.log(link3.innerText);
-
+}
+function testingTri() {
 	// Dobijanje najblizeg elementa na osnovu datog :
 	let text = document.querySelector(".text");
 
@@ -47,4 +48,8 @@ function testingDva() {
 
 	// Uzimanje vec postojeceg atributa :
 	console.log(text.getAttribute("data-testing"));
+
+	// A da bi sklonili neki atribut koji smo postavili ili koji vise nije potreban :
+
+	text.removeAttribute("class");
 }
