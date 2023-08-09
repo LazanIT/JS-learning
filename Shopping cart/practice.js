@@ -55,5 +55,7 @@ function testingTri() {
 }
 // Upis HTML elemenata u div
 function testingCetiri() {
-	
+	let glavniDiv = document.querySelector(".neki-div");
+
+	glavniDiv.innerHTML = "<hr>"
 }
