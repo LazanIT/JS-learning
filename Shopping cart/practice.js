@@ -54,8 +54,32 @@ function testingTri() {
 	text.removeAttribute("class");
 }
 // Upis HTML elemenata u div
-function testingCetiri() {
+function validacija() {
 	let glavniDiv = document.querySelector(".neki-div");
 
-	glavniDiv.innerHTML = "<hr>"
+	// glavniDiv.innerHTML = "<hr>"; // Ovo je jedan od losijih nacina koriscenja
+
+	// Pravi nacin za koriscenje je : Primer validacije :
+
+	let input = document.querySelector("#email");
+	let valu = input.value;
+
+	if (valu == "") {
+		alert("input ne moze biti prazan");
+	} else {
+		console.log(valu);
+	}
+
+	// Pomocu includes proveravamo da li string sadrzi znak, broj...
+	if (valu.includes("@") && valu.includes(".")) {
+		// Sledece sto radimo je da proveravamo na kojoj se poziciji nalazi " @ " i " . "
+		let pozicijaAt = valu.indexOf("@"); // indexOf - nam sluzi da pronadjemo na kojoj je poziciji karakter
+		let pozicijaTacke = valu.indexOf(".");
+
+		// Zatim proveravamo sta se nalazi izmedju izmedju njih
+
+		console.log(valu.substring(pozicijaAt, pozicijaTacke + 1)); // substring - sluzi za proveravanje karaktera izmedju 2 pozicije
+	} else {
+		console.log("Nije validan email");
+	}
 }
