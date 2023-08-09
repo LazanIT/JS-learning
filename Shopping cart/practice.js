@@ -33,8 +33,8 @@ function testingDva() {
 	console.log(link2.innerText);
 	console.log(link3.innerText);
 }
+// Dobijanje najblizeg elementa na osnovu datog :
 function testingTri() {
-	// Dobijanje najblizeg elementa na osnovu datog :
 	let text = document.querySelector(".text");
 
 	console.log(text.closest("div"));
@@ -52,4 +52,8 @@ function testingTri() {
 	// A da bi sklonili neki atribut koji smo postavili ili koji vise nije potreban :
 
 	text.removeAttribute("class");
+}
+// Upis HTML elemenata u div
+function testingCetiri() {
+	
 }
