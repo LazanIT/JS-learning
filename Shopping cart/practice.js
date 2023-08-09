@@ -40,4 +40,11 @@ function testingDva() {
 
 	// Funkcija " closest  " radi tako sto daje najblizi element naseg datog elementa
 	// A takodje moze dati i najblizi element sa odredjenom klasom
+
+	// Takodje sada ovom textu ili bilo kom elementu mozemo dodati jos jednu klasu :
+	// Prva stvar koju stavljamo je vrednost sta mu dodajemo a druga stvar je ime te vrednosti
+	text.setAttribute("class", "plava-boja");
+
+	// Uzimanje vec postojeceg atributa :
+	console.log(text.getAttribute("data-testing"));
 }
