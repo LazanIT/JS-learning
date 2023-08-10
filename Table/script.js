@@ -1,4 +1,3 @@
-// script.js
 const usersTable = document.getElementById("users-table");
 const printOutBtn = document.getElementById("print-btn");
 const outputDiv = document.getElementById("output");
@@ -42,7 +41,7 @@ deleteUsersBtn.addEventListener("click", () => {
 });
 
 const employeesTable = document.getElementById("employees-table");
-const izbrisiBtn = document.getElementById("izbrisi-btn");
+const deleteBtn = document.getElementById("delete-btn");
 const warningDiv = document.getElementById("warning");
 
 let clickedEmployee = null;
@@ -72,7 +71,7 @@ employeesTable.addEventListener("click", (event) => {
 	}
 });
 
-izbrisiBtn.addEventListener("click", () => {
+deleteBtn.addEventListener("click", () => {
 	if (clickedEmployee) {
 		clickedEmployee.remove();
 		clickedEmployee = null;
