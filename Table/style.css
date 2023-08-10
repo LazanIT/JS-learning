@@ -1,0 +1,58 @@
+#users-table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#users-table th,
+#users-table td {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#users-table th {
+	background-color: #f2f2f2;
+	text-align: left;
+}
+
+#users-table tr:hover {
+	background-color: lightblue;
+}
+
+#employees-table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+#employees-table th,
+#employees-table td {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+#employees-table th {
+	background-color: #f2f2f2;
+	text-align: left;
+}
+
+#employees-table tr:hover {
+	background-color: lightblue;
+}
+
+#employees-table tr.selected {
+	background-color: red;
+	color: white;
+}
+
+#employees-table tr.low-salary {
+	background-color: blue;
+	color: white;
+}
+
+#employees-table tr.higher-salary {
+	background-color: green;
+	color: white;
+}
+
+#izbrisi-btn {
+	margin-top: 10px;
+}
