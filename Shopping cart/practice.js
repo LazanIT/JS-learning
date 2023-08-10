@@ -77,9 +77,22 @@ function validacija() {
 		let pozicijaTacke = valu.indexOf(".");
 
 		// Zatim proveravamo sta se nalazi izmedju izmedju njih
+		let izmedjuAtTacka = valu.substring(pozicijaAt, pozicijaTacke + 1);
 
-		console.log(valu.substring(pozicijaAt, pozicijaTacke + 1)); // substring - sluzi za proveravanje karaktera izmedju 2 pozicije
+		// console.log(valu.substring(pozicijaAt, pozicijaTacke + 1)); // substring - sluzi za proveravanje karaktera izmedju 2 pozicije
+
+		if (izmedjuAtTacka.length > 0) {
+			let preAt = valu.substring(0, pozicijaAt);
+
+			if (preAt.length > 2) {
+				console.log("Dobro je");
+			} else {
+				console.error("Mail nije validan");
+			}
+		} else {
+			console.error("Mail nije validan");
+		}
 	} else {
-		console.log("Nije validan email");
+		console.error("Nije validan email");
 	}
 }
