@@ -81,12 +81,16 @@ function validacija() {
 
 		// console.log(valu.substring(pozicijaAt, pozicijaTacke + 1)); // substring - sluzi za proveravanje karaktera izmedju 2 pozicije
 
+
+		// Proveravamo da li se nalazi nesto 
 		if (izmedjuAtTacka.length > 0) {
 			let preAt = valu.substring(0, pozicijaAt);
 
+			// Proveravamo da li se nalazi nesto pre @
 			if (preAt.length > 2) {
 				let posleTacke = valu.substring(pozicijaTacke + 1, valu.length);
 
+				// Proveravamo da li se nalazi nesto posle . 
 				if (posleTacke.length > 1) {
 					console.log("Mail je validan ");
 				} else {
