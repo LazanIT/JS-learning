@@ -85,7 +85,13 @@ function validacija() {
 			let preAt = valu.substring(0, pozicijaAt);
 
 			if (preAt.length > 2) {
-				console.log("Dobro je");
+				let posleTacke = valu.substring(pozicijaTacke + 1, valu.length);
+
+				if (posleTacke.length > 1) {
+					console.log("Mail je validan ");
+				} else {
+					console.error("Mail nije validan");
+				}
 			} else {
 				console.error("Mail nije validan");
 			}
