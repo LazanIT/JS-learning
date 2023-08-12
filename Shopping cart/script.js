@@ -1,3 +1,5 @@
 // alert("Js radi");
 
-function addToCart() {}
+function addToCart(event) {
+	console.log(event);
+}
