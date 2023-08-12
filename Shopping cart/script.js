@@ -1,5 +1,5 @@
 // alert("Js radi");
 
 function addToCart(event) {
-	console.log(event);
+	console.log(event.previousElementSibling.value);
 }
