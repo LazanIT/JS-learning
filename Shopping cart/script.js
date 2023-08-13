@@ -18,6 +18,8 @@ function addToCart(event) {
 
 	if (parseInt(quantity) > 0) {
 		cartItems.innerHTML += "Dodato : " + name + "<br>";
+		event.innerText = "Dodato";
+		event.disabled = true;
 	} else {
 		alert("Odaberi kolicinu");
 		return;
