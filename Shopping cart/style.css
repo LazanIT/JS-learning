@@ -113,11 +113,13 @@ h3 {
 	font-weight: bold;
 	transition: 0.3s ease-in-out;
 }
-.single-item .actions button:hover {
+.single-item .actions button:hover:enabled {
 	transform: translateX(5px);
 	cursor: pointer;
 }
-
+.single-item .actions button:not([disabled]) {
+	transform: translateX(0px);
+}
 .cart-single-item {
 	display: flex;
 	justify-content: space-between;
