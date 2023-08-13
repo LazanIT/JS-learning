@@ -16,6 +16,12 @@ function addToCart(event) {
 
 	// Ubacujemo podatke u CART
 
-	cartItems.innerHTML += "Dodato : " + name + "<br>";
+	if (parseInt(quantity) > 0) {
+		cartItems.innerHTML += "Dodato : " + name + "<br>";
+	} else {
+		alert("Odaberi kolicinu");
+		return;
+	}
+
 	console.log(quantity);
 }
