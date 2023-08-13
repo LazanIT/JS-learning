@@ -11,5 +11,11 @@ function addToCart(event) {
 	let name = mainElement.querySelector("h3").innerText;
 
 	let quantity = mainElement.querySelector("input").value;
+
+	let cartItems = document.querySelector(".cart-items");
+
+	// Ubacujemo podatke u CART
+
+	cartItems.innerHTML += "Dodato : " + name + "<br>";
 	console.log(quantity);
 }
