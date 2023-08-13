@@ -17,7 +17,16 @@ function addToCart(event) {
 	// Ubacujemo podatke u CART
 
 	if (parseInt(quantity) > 0) {
-		cartItems.innerHTML += "Dodato : " + name + "<br>";
+		price = price.substring(1);
+
+		price = parseInt(price);
+
+		quantity = parseInt(quantity);
+
+		let total = price * quantity;
+		console.log(total);
+
+		cartItems.innerHTML += `Proizvod: ${name} <br> Cena: ${price} <br> Kolicina: ${quantity} <br> Total: ${total} <br> <hr>`;
 		event.innerText = "Dodato";
 		event.setAttribute("disabled", "true");
 		event.classList.remove("hover");
@@ -25,6 +34,4 @@ function addToCart(event) {
 		alert("Odaberi kolicinu");
 		return;
 	}
-
-	console.log(quantity);
 }
