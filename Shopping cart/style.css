@@ -133,6 +133,11 @@ h3 {
 
 .cart-single-item button {
 	padding: 5px;
+	background-color: bisque;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 10px;
+	border: 2px solid whitesmoke;
 }
 
 .total {
