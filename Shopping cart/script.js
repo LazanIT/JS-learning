@@ -1,5 +1,7 @@
 // alert("Js radi");
 
+let allTotal = 0;
+
 function addToCart(event) {
 	let input = event.previousElementSibling.value;
 
@@ -24,12 +26,17 @@ function addToCart(event) {
 		quantity = parseInt(quantity);
 
 		let total = price * quantity;
-		console.log(total);
+
+		allTotal += total;
+
+		let totalDiv = document.querySelector(".total");
 
 		cartItems.innerHTML += `<div class="cart-single-item"> <h3>${name}</h3> <p>$${price} x ${quantity} = ${total}$ </p> <button type="button" class> Remove Item </button> </div>`;
 		event.innerText = "Dodato";
 		event.setAttribute("disabled", "true");
 		event.classList.remove("hover");
+
+		totalDiv.innerHTML = `Ukupna cena je : ${allTotal} dolara`;
 	} else {
 		alert("Odaberi kolicinu");
 		return;
