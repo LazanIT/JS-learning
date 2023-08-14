@@ -26,7 +26,7 @@ function addToCart(event) {
 		let total = price * quantity;
 		console.log(total);
 
-		cartItems.innerHTML += `<div class="cart-single-item"Proizvod: ${name} <br> Cena: ${price} <br> Kolicina: ${quantity} <br> Total: ${total} <br> <hr> </div>`;
+		cartItems.innerHTML += `<div class="cart-single-item"> <h3>${name}</h3> <p>${price} x ${quantity} = ${total}$ </p> </div>`;
 		event.innerText = "Dodato";
 		event.setAttribute("disabled", "true");
 		event.classList.remove("hover");
