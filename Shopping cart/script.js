@@ -43,11 +43,10 @@ function addToCart(event) {
 	}
 }
 function removeFromCart(element) {
-	console.log("removing");
-
 	let mainElement = element.closest(".cart-single-item");
 	let price = mainElement.querySelector("p span").innerText;
-
+	let name = mainElement.querySelector("h3").innerText;
+	let vegetables = document.querySelectorAll(".single-item");
 	price = parseInt(price);
 
 	allTotal -= price;
