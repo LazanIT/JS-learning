@@ -31,7 +31,7 @@ function addToCart(event) {
 
 		let totalDiv = document.querySelector(".total");
 
-		cartItems.innerHTML += `<div class="cart-single-item"> <h3>${name}</h3> <p>$${price} x ${quantity} = <span>${total}$</span> </p> <button type="button" class="remove-item" onclick="removeFromCart(this)"> Remove Item </button> </div>`;
+		cartItems.innerHTML += `<div class="cart-single-item"> <h3>${name}</h3> <p>$${price} x ${quantity} = $<span>${total}</span> </p> <button type="button" class="remove-item" onclick="removeFromCart(this)"> Remove Item </button> </div>`;
 		event.innerText = "Dodato";
 		event.setAttribute("disabled", "true");
 		event.classList.remove("hover");
@@ -46,5 +46,13 @@ function removeFromCart(element) {
 	console.log("removing");
 
 	let mainElement = element.closest(".cart-single-item");
+	let price = mainElement.querySelector("p span").innerText;
+
+	price = parseInt(price);
+
+	allTotal -= price;
+	let totalDiv = document.querySelector(".total");
+
+	totalDiv.innerHTML = `Ukupna cena je : ${allTotal} dolara`;
 	mainElement.remove();
 }
