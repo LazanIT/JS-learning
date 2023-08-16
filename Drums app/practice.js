@@ -14,7 +14,7 @@ clickMe();
 // Arrow function
 // Kod arrow funkcija se koristi const ( Konstante koje se ne menjaju )
 /*
-    Sto znaci da mi funkcije necemo menjati, nego samo sta da funkcija radi unutar sebe 
+    Sto znaci da mi funkcije necemo menjati, nego samo sta ta funkcija radi unutar sebe, tacnije njen sadrzaj
 */
 let clickMeNew = () => {
 	let a = 5;
