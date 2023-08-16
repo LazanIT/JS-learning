@@ -54,4 +54,14 @@ function removeFromCart(element) {
 
 	totalDiv.innerHTML = `Ukupna cena je : ${allTotal} dolara`;
 	mainElement.remove();
+
+	vegetables.forEach(function (vege) {
+		if (vege.querySelector(".si-content h3").innerHTML === name) {
+			vege.querySelector(".actions input").value = 0;
+			let buttonVegetables = vege.querySelector(".actions button");
+			buttonVegetables.removeAttribute("disabled");
+			buttonVegetables.classList.add("hover");
+			buttonVegetables.innerHTML = "Dodaj";
+		}
+	});
 }
