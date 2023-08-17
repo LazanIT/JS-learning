@@ -24,8 +24,13 @@ clickMeNew(20, 30);
 
 // Kada u zagradama imamo samo jedan argument, mozemo da napisemo funkciju bez zagrada () :
 
-const clickMeNewTwo = b => {
+const clickMeNewTwo = (b) => {
 	let a = 10;
 	console.log(a + b);
 };
 clickMeNewTwo(100);
+
+// Takodje kada imamo samo jednu liniju koda u funkciji, onda mozemo pisati bez viticastih zagrada { }
+const clickMeNewThird = (a, b) => console.log(a + b);
+
+clickMeNewThird(100, 500);
