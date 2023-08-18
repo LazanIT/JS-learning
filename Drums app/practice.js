@@ -34,3 +34,12 @@ clickMeNewTwo(100);
 const clickMeNewThird = (a, b) => console.log(a + b);
 
 clickMeNewThird(100, 500);
+
+// EventListener's start
+
+let btn = document.querySelector("button");
+
+console.log(btn.innerText);
+btn.addEventListener("click", () => {
+	
+});
