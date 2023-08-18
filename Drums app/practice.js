@@ -37,9 +37,10 @@ clickMeNewThird(100, 500);
 
 // EventListener's start
 
-let btn = document.querySelector("button");
+let btns = document.querySelectorAll("button");
 
-console.log(btn.innerText);
-btn.addEventListener("click", () => {
-	
+btns.forEach( (btn) => {
+	btn.addEventListener("click", () => {
+		console.log("Kliknut sam");
+	});
 });
