@@ -40,7 +40,9 @@ clickMeNewThird(100, 500);
 let btns = document.querySelectorAll("button");
 
 btns.forEach( (btn) => {
-	btn.addEventListener("click", () => {
-		console.log("Kliknut sam");
+
+	// Event Listener koji ceka za klik, za svako dugme
+	btn.addEventListener("click", (event) => {
+		console.log(event.target); // Pomocu targeta dobijamo tacno koji je element kliknut
 	});
 });
