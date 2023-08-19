@@ -48,3 +48,12 @@ btns.forEach( (btn) => {
 		console.log(clickedBtn.innerText)
 	});
 });
+
+let googleLink = document.querySelector("#link");
+
+googleLink.addEventListener("click", (event) => {
+
+	event.preventDefault(); // Koristi nam da prekinemo prvobitnu funkciju ako je to moguce
+	console.log(event.target)
+
+})
