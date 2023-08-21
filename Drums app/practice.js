@@ -70,3 +70,11 @@ let opcije = document.querySelector("select");
 opcije.addEventListener("change", (event) => {
 	console.log(event.target.value);
 });
+
+// Resize eventListener
+// Koristimo da vidimo rezoluciju browsera kada se promeni
+
+window.addEventListener("resize", () => {
+	console.log(window.innerWidth + `px`);
+	console.log(window.innerHeight + `px`);
+});
