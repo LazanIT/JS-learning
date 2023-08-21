@@ -62,3 +62,11 @@ let forma = document.querySelector("form");
 forma.addEventListener("submit", (event) => {
 	event.preventDefault();
 });
+
+// Za select html element koristimo eventListener pod nazivom Change :
+
+let opcije = document.querySelector("select");
+
+opcije.addEventListener("change", (event) => {
+	console.log(event.target.value);
+});
