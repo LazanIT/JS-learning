@@ -78,3 +78,12 @@ window.addEventListener("resize", () => {
 	console.log(window.innerWidth + `px`);
 	console.log(window.innerHeight + `px`);
 });
+
+//Keydown eventListener
+//Keydown nam sluzi da nam ispise koje smo dugme pritisnuli
+
+let textInput = document.querySelector("#text");
+
+textInput.addEventListener("keydown", (event) => {
+	console.log(event.key); // .key nam sluzi da nam tacno ispise slovo ili broj koje smo kliknuli na nasoj tastaturi
+});
