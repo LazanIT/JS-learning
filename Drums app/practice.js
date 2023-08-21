@@ -39,21 +39,26 @@ clickMeNewThird(100, 500);
 
 let btns = document.querySelectorAll("button");
 
-btns.forEach( (btn) => {
-
+btns.forEach((btn) => {
 	// Event Listener koji ceka za klik, za svako dugme
 	btn.addEventListener("click", (event) => {
-		let clickedBtn = event.target // Pomocu targeta dobijamo tacno koji je element kliknut
+		let clickedBtn = event.target; // Pomocu targeta dobijamo tacno koji je element kliknut
 
-		console.log(clickedBtn.innerText)
+		console.log(clickedBtn.innerText);
 	});
 });
 
 let googleLink = document.querySelector("#link");
 
 googleLink.addEventListener("click", (event) => {
-
 	event.preventDefault(); // Koristi nam da prekinemo prvobitnu funkciju ako je to moguce
-	console.log(event.target)
+	console.log(event.target);
+});
 
-})
+// Primer preventDefaulta :
+
+let forma = document.querySelector("form");
+
+forma.addEventListener("submit", (event) => {
+	event.preventDefault();
+});
