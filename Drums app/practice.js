@@ -87,3 +87,10 @@ let textInput = document.querySelector("#text");
 textInput.addEventListener("keydown", (event) => {
 	console.log(event.key); // .key nam sluzi da nam tacno ispise slovo ili broj koje smo kliknuli na nasoj tastaturi
 });
+
+// Detektovanje pomeranja misa
+// Mousemove eventListener
+// Mousemove - Mozemo koristiti za window, a takodje mozemo koristiti za neki drugi HTML element
+textInput.addEventListener("mousemove", () => {
+	console.log("Mis se pomerio");
+});
