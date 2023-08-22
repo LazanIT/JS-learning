@@ -31,9 +31,11 @@ window.addEventListener("keydown", (event) => {
 			animateHiHatClose();
 			break;
 	}
+
+	keyElement.classList.add("playing");
 });
 
-let removeCrashRideTransition = (e) => {
+const removeCrashRideTransition = (e) => {
 	if (e.propertyName !== "transform") {
 		return;
 	} else {
@@ -41,13 +43,26 @@ let removeCrashRideTransition = (e) => {
 	}
 };
 
-let removeHiHatTopTransition = (e) => {
+const removeHiHatTopTransition = (e) => {
 	if (e.propertyName !== "top") {
 		return;
 	} else {
-		e.target.classList.remove("playing");
+		e.target.style.top = '166px'
 	}
 };
+
+const removeKeyTransition = (e) => {
+	if (e.propertyName !== "transform") {
+		return;
+	}
+	e.target.classList.remove("playing");
+};
+
+let drumKeys = document.querySelectorAll(".key");
+
+drumKeys.forEach((key) => {
+	key.addEventListener("transitionend", removeKeyTransition);
+});
 
 crashRide.addEventListener("transitionend", removeCrashRideTransition);
 hiHatTop.addEventListener("transitionend", removeHiHatTopTransition);
