@@ -1,3 +1,10 @@
+let crashRide = document.querySelector("#crash-ride");
+let hiHatTop = document.querySelector("#hihat-top");
+
+const animateCrashOrRide = () => {
+	crashRide.style.transform = "rotate(0deg) scale(1.5)";
+};
+
 window.addEventListener("keydown", (event) => {
 	let code = event.keyCode;
 
@@ -10,5 +17,11 @@ window.addEventListener("keydown", (event) => {
 	} else {
 		alert("Pritisnuli ste taster koji ne postoji ");
 		return;
+	}
+
+	switch (code) {
+		case 69:
+		case 82:
+			animateCrashOrRide();
 	}
 });
