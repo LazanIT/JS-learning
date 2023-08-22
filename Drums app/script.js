@@ -6,7 +6,7 @@ const animateCrashOrRide = () => {
 };
 
 const animateHiHatClose = () => {
-	hiHatTop.style.top = `171px`;
+	hiHatTop.style.top = "171px";
 };
 
 window.addEventListener("keydown", (event) => {
@@ -19,7 +19,6 @@ window.addEventListener("keydown", (event) => {
 		audio.currentTime = 0;
 		audio.play();
 	} else {
-		alert("Pritisnuli ste taster koji ne postoji ");
 		return;
 	}
 
@@ -33,3 +32,22 @@ window.addEventListener("keydown", (event) => {
 			break;
 	}
 });
+
+let removeCrashRideTransition = (e) => {
+	if (e.propertyName !== "transform") {
+		return;
+	} else {
+		e.target.style.transform = "rotate(-7.2deg) scale(1.5)";
+	}
+};
+
+let removeHiHatTopTransition = (e) => {
+	if (e.propertyName !== "top") {
+		return;
+	} else {
+		e.target.classList.remove("playing");
+	}
+};
+
+crashRide.addEventListener("transitionend", removeCrashRideTransition);
+hiHatTop.addEventListener("transitionend", removeHiHatTopTransition);
