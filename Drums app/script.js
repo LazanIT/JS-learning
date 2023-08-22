@@ -5,6 +5,10 @@ const animateCrashOrRide = () => {
 	crashRide.style.transform = "rotate(0deg) scale(1.5)";
 };
 
+const animateHiHatClose = () => {
+	hiHatTop.style.top = `171px`;
+};
+
 window.addEventListener("keydown", (event) => {
 	let code = event.keyCode;
 
@@ -23,5 +27,9 @@ window.addEventListener("keydown", (event) => {
 		case 69:
 		case 82:
 			animateCrashOrRide();
+			break;
+		case 75:
+			animateHiHatClose();
+			break;
 	}
 });
