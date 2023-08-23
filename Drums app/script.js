@@ -43,6 +43,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 const removeCrashRideTransition = (e) => {
+	// Sledecom fukcijom sklanjamo efekte koje smo ranije dodali kako bi napravili animaciju
 	if (e.propertyName !== "transform") {
 		return;
 	} else {
@@ -51,6 +52,7 @@ const removeCrashRideTransition = (e) => {
 };
 
 const removeHiHatTopTransition = (e) => {
+	// Sledecom fukcijom sklanjamo stil koji smo ranije dodali kako bi napravili animaciju
 	if (e.propertyName !== "top") {
 		return;
 	} else {
@@ -59,6 +61,7 @@ const removeHiHatTopTransition = (e) => {
 };
 
 const removeKeyTransition = (e) => {
+	// Sledecom fukcijom sklanjamo klasu "playing" kako bi dobili efekat animacije
 	if (e.propertyName !== "transform") {
 		return;
 	}
@@ -67,6 +70,8 @@ const removeKeyTransition = (e) => {
 
 let drumKeys = document.querySelectorAll(".key");
 
+// Pomocu forEach petlje prelazimo preko svakog kliknutog dugmeta i dodajemo mu klasu removeKeyTransition
+// Samim tim sklanjamo tu animaciju
 drumKeys.forEach((key) => {
 	key.addEventListener("transitionend", removeKeyTransition);
 });
