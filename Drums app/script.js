@@ -1,8 +1,8 @@
-let crashRide = document.querySelector("#crash-ride");
-let hiHatTop = document.querySelector("#hihat-top");
-
+let crashRide = document.querySelector("#crash-ride"); // Uzimamo vrednosti iz HTML-a za levi deo
+let hiHatTop = document.querySelector("#hihat-top"); // Uzimamo vrednosti iz HTML-a za desni deo
+ 
 const animateCrashOrRide = () => {
-	crashRide.style.transform = "rotate(0deg) scale(1.5)";
+	crashRide.style.transform = "rotate(0deg) scale(1.5)"; // Funkcija za animaciju pomeranja
 };
 
 const animateHiHatClose = () => {
