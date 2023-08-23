@@ -1,11 +1,12 @@
 let crashRide = document.querySelector("#crash-ride"); // Uzimamo vrednosti iz HTML-a za levi deo
 let hiHatTop = document.querySelector("#hihat-top"); // Uzimamo vrednosti iz HTML-a za desni deo
- 
+
 const animateCrashOrRide = () => {
 	crashRide.style.transform = "rotate(0deg) scale(1.5)"; // Funkcija za animaciju pomeranja
 };
 
 const animateHiHatClose = () => {
+	// Funkcija za dodavanje stila
 	hiHatTop.style.top = "171px";
 };
 
@@ -30,9 +31,15 @@ window.addEventListener("keydown", (event) => {
 		case 75:
 			animateHiHatClose();
 			break;
-	}
+	} /* Pomocu eventListenera keydown, proveravamo da li je neko dugme kliknut	
+		A zatim uzimamo vrednost tog dugmeta, tacnije njegov keyCode
+		Pomocu if-a proveravamo da li je kliknuto dugme koje postoji, ukoliko jeste uzimamo njegov audio i stavljamo da nema delay
+		Ukoliko nije ne radi nista
+		Pomocu Switcha uzimamo odredjeni code i postavljamo mu animaciju
 
-	keyElement.classList.add("playing");
+	  */
+
+	keyElement.classList.add("playing"); // Dodajemo klasu " Playing "
 });
 
 const removeCrashRideTransition = (e) => {
@@ -47,7 +54,7 @@ const removeHiHatTopTransition = (e) => {
 	if (e.propertyName !== "top") {
 		return;
 	} else {
-		e.target.style.top = '166px'
+		e.target.style.top = "166px";
 	}
 };
 
