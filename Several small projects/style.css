@@ -60,6 +60,7 @@ h3 {
 @media (max-width: 1000px) {
 	.header button {
 		display: block;
+		transition: 0.4s linear 1s;
 	}
 
 	.header ul {
@@ -70,6 +71,9 @@ h3 {
 		left: 0;
 		right: 0;
 		top: 119px;
+	}
+	.header ul li a {
+		transition: 0.4s linear;
 	}
 }
 
