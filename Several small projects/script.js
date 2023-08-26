@@ -15,10 +15,26 @@ const mobileMenu = () => {
 // Image slider
 let rightBtn = document.querySelector("#right-btn");
 let leftBtn = document.querySelector("#left-btn");
+let pictures = document.querySelectorAll(".slider-images img");
+
+let imgNumber = 0;
 
 rightBtn.addEventListener("click", () => {
-	console.log("right");
+	displayNone(pictures);
+	imgNumber++;
+
+	if (imgNumber === pictures.length) {
+		imgNumber = 0;
+	}
+	pictures[imgNumber].style.display = "block";
 });
 leftBtn.addEventListener("click", () => {
-	console.log("left");
+	console.error(pictures);
 });
+
+// Ova funckija ce da sakrije sve slike
+const displayNone = () => {
+	pictures.forEach((img) => {
+		img.style.display = "none";
+	});
+};
