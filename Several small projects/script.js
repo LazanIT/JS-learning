@@ -19,7 +19,7 @@ let pictures = document.querySelectorAll(".slider-images img");
 
 let imgNumber = 0;
 
-rightBtn.addEventListener("click", () => {
+const moveRight = () => {
 	displayNone(pictures);
 	imgNumber++;
 
@@ -27,10 +27,21 @@ rightBtn.addEventListener("click", () => {
 		imgNumber = 0;
 	}
 	pictures[imgNumber].style.display = "block";
-});
-leftBtn.addEventListener("click", () => {
-	console.error(pictures);
-});
+};
+
+const moveLeft = () => {
+	displayNone(pictures);
+
+	imgNumber--;
+
+	if (imgNumber === -1) {
+		imgNumber = pictures.length - 1;
+	}
+	pictures[imgNumber].style.display = "block";
+};
+
+rightBtn.addEventListener("click", moveRight);
+leftBtn.addEventListener("click", moveLeft);
 
 // Ova funckija ce da sakrije sve slike
 const displayNone = () => {
