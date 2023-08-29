@@ -19,6 +19,7 @@ let pictures = document.querySelectorAll(".slider-images img");
 
 let imgNumber = 0;
 
+// Funkcija za desnu strelicu
 const moveRight = () => {
 	displayNone(pictures);
 	imgNumber++;
@@ -29,6 +30,7 @@ const moveRight = () => {
 	pictures[imgNumber].style.display = "block";
 };
 
+// Funkcija za levu strelicu
 const moveLeft = () => {
 	displayNone(pictures);
 
@@ -40,6 +42,7 @@ const moveLeft = () => {
 	pictures[imgNumber].style.display = "block";
 };
 
+// EventListeneri za strelice
 rightBtn.addEventListener("click", moveRight);
 leftBtn.addEventListener("click", moveLeft);
 
