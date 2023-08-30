@@ -78,3 +78,16 @@ const portfolioSort = (button) => {
 		}
 	});
 };
+
+// Modal button
+
+const openModal = () => {
+	let modalWindow = document.querySelector(".popup-modal");
+
+	let overlay = document.querySelector(".overlay");
+
+	modalWindow.style.display = "block";
+
+	overlay.style.display = "block";
+};
+
