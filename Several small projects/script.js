@@ -63,4 +63,18 @@ const portfolioSort = (button) => {
 	singleItem.forEach((item) => {
 		item.style.display = "none";
 	});
+
+	if (category === "sve") {
+		singleItem.forEach((item) => {
+			item.style.display = "block";
+		});
+	}
+
+	singleItem.forEach((item) => {
+		let singleItemCategory = item.getAttribute("data-category");
+
+		if (singleItemCategory.includes(category)) {
+			item.style.display = "block";
+		}
+	});
 };
