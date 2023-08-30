@@ -53,4 +53,14 @@ const displayNone = () => {
 	});
 };
 
-// Portofolio 
+// Portofolio
+
+const portfolioSort = (button) => {
+	let category = button.getAttribute("data-category");
+
+	let singleItem = document.querySelectorAll(".portfolio-single-item");
+
+	singleItem.forEach((item) => {
+		item.style.display = "none";
+	});
+};
