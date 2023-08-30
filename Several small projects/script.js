@@ -91,3 +91,12 @@ const openModal = () => {
 	overlay.style.display = "block";
 };
 
+const closeModal = () => {
+	let modalWindow = document.querySelector(".popup-modal");
+
+	let overlay = document.querySelector(".overlay");
+
+	modalWindow.style.display = "none";
+
+	overlay.style.display = "none";
+};
