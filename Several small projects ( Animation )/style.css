@@ -12,9 +12,19 @@ body {
 .section {
 	height: 100vh;
 }
+.images img {
+	width: 50%;
+}
 .section2 .images {
 	display: flex;
 }
-.section2 .images img{
-    width: 50%;
+
+@media screen and (max-width: 800px) {
+	.images img {
+		width: 100%;
+	}
+	.section2 .images {
+		flex-direction: column;
+		height: 100%;
+	}
 }
