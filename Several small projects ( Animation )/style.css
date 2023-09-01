@@ -20,6 +20,9 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+	body {
+		background-color: bisque;
+	}
 	.images img {
 		width: 100%;
 	}
