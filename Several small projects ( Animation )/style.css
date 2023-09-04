@@ -23,6 +23,11 @@ body {
 	line-height: 100vh;
 	font-size: 5rem;
 	letter-spacing: 1px;
+	transition: all 1s ease;
+}
+
+.section .fadeMove {
+	transform: translateY(50px);
 }
 
 .section2 h1 {
