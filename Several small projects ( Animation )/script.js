@@ -7,14 +7,23 @@ let splittedText = text.split("");
 textTag.innerHTML = "";
 
 for (let i = 0; i < splittedText.length; i++) {
+	if (splittedText[i] == " ") {
+		splittedText[i] = "&nbsp;";
+	}
 	textTag.innerHTML += `<span>${splittedText[i]}</span>`;
 }
 
 let k = 0;
-setInterval(() => {
-	let singleSpan = document.querySelectorAll(".section h1 span");
+let timeInterval = setInterval(() => {
+	let spans = document.querySelectorAll(".section h1 span");
 
-	console.log(singleSpan);
+	let singleSpan = spans[k];
+
+	singleSpan.classList = "fadeMove";
 
 	k++;
-}, 2000);
+
+	if (k === spans.length) {
+		clearInterval(timeInterval);
+	}
+}, 600);
