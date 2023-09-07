@@ -49,6 +49,9 @@ body {
 	height: 2px;
 	width: 70%;
 	background-color: blueviolet;
+	position: fixed;
+	top: 0;
+	transition: all 0.4s ease-in-out;
 }
 
 @media screen and (max-width: 800px) {
