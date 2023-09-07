@@ -32,3 +32,8 @@ const animateText = () => {
 };
 
 animateText();
+
+
+window.onscroll(() => {
+	
+})
