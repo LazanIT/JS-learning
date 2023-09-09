@@ -45,7 +45,7 @@ body {
 	text-transform: capitalize;
 }
 .border-line {
-	margin-top: 100px;
+	margin-top: 2px;
 	height: 2px;
 	width: 70%;
 	background-color: blueviolet;
