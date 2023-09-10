@@ -47,7 +47,7 @@ body {
 .border-line {
   margin-top: 2px;
   height: 5px;
-  width: 70%;
+  width: 0%;
   background-color: blueviolet;
   position: fixed;
   top: 0;

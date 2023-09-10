@@ -32,9 +32,17 @@ const animateText = () => {
 
 animateText();
 
-window.onscroll(() => {
-  let borderLine = document.querySelector(".border-line");
-  console.log(borderLine);
-  if (borderLine == true) {
+let borderLine = document.querySelector(".border-line");
+let animationWidth = 0;
+window.onscroll = () => {
+  // This nam je u ovom slucaju window
+  console.log(this.scrollY); // Uzimamo koliko smo scroll window po Y osi
+
+  if (animationWidth >= 100) {
+    animationWidth = 100;
+  } else {
+    animationWidth += 1;
   }
-});
+
+  borderLine.style.width = animationWidth + "%";
+};
