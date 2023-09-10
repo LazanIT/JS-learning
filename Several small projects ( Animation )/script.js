@@ -40,9 +40,9 @@ window.onscroll = () => {
   // console.log(this.scrollY); // Uzimamo koliko smo scroll window po Y osi
 
   if (this.oldScroll > this.scrollY) {
-    animationWidth -= 1.5;
+    animationWidth -= 1.7;
   } else {
-    animationWidth += 1.5;
+    animationWidth += 1.7;
   }
 
   if (animationWidth >= 100) {
