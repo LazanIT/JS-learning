@@ -1,3 +1,4 @@
+// Animated Text
 const animateText = () => {
   let textTag = document.querySelector(".section h1");
 
@@ -32,14 +33,19 @@ const animateText = () => {
 
 animateText();
 
+// Border Line animation
 let borderLine = document.querySelector(".border-line");
+
 let animationWidth = 0;
+let Images = document.querySelectorAll(".images img");
+
+let oldScroll = 0; // Store the old scroll position
 
 window.onscroll = () => {
-  // This nam je u ovom slucaju window
-  // console.log(this.scrollY); // Uzimamo koliko smo scroll window po Y osi
+  // Get the current scroll position
+  let scrollY = window.scrollY;
 
-  if (this.oldScroll > this.scrollY) {
+  if (oldScroll > scrollY) {
     animationWidth -= 1.7;
   } else {
     animationWidth += 1.7;
@@ -52,7 +58,22 @@ window.onscroll = () => {
   if (animationWidth <= 0) {
     animationWidth = 0;
   }
+
   borderLine.style.width = animationWidth + "%";
 
-  this.oldScroll = this.scrollY;
+  oldScroll = scrollY;
+
+  ImageAnimation();
+};
+
+const ImageAnimation = () => {
+  let sectionForAnimation = document.querySelector(".section2 .images");
+  let sectionPosition = sectionForAnimation.getBoundingClientRect().top;
+  let screenPosition = window.innerHeight / 1.32;
+  // Animated Images (Fade In effect)
+  if (sectionPosition < screenPosition) {
+    Images.forEach((image) => {
+      image.classList.add("animated");
+    });
+  }
 };
