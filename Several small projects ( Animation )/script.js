@@ -34,15 +34,25 @@ animateText();
 
 let borderLine = document.querySelector(".border-line");
 let animationWidth = 0;
+
 window.onscroll = () => {
   // This nam je u ovom slucaju window
-  console.log(this.scrollY); // Uzimamo koliko smo scroll window po Y osi
+  // console.log(this.scrollY); // Uzimamo koliko smo scroll window po Y osi
+
+  if (this.oldScroll > this.scrollY) {
+    animationWidth -= 1.5;
+  } else {
+    animationWidth += 1.5;
+  }
 
   if (animationWidth >= 100) {
     animationWidth = 100;
-  } else {
-    animationWidth += 1;
   }
 
+  if (animationWidth <= 0) {
+    animationWidth = 0;
+  }
   borderLine.style.width = animationWidth + "%";
+
+  this.oldScroll = this.scrollY;
 };
