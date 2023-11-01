@@ -31,7 +31,15 @@ class Osoba {
   pol;
 
   sayHello = () => {
-    console.log(`Pozdrav ja se zovem ${this.ime} i prezivam ${this.prezime}`);
+    if (this.pol === "Musko") {
+      console.log(
+        `Pozdrav ja se zovem ${this.ime} i prezivam ${this.prezime} i visok sam ${this.visina}`
+      );
+    } else {
+      console.log(
+        `Pozdrav ja se zovem ${this.ime} i prezivam ${this.prezime} i visoka sam ${this.visina}`
+      );
+    }
   };
 }
 
@@ -40,7 +48,14 @@ Petar.ime = "Petar";
 Petar.prezime = "Petric";
 Petar.tezina = 70;
 Petar.visina = 189;
-bojaOciju = "plava";
-pol = "Musko";
-
+Petar.bojaOciju = "plava";
+Petar.pol = "Musko";
 Petar.sayHello();
+
+let Dunja = new Osoba();
+Dunja.ime = "Dunja";
+Dunja.prezime = "Mirosavljevic";
+Dunja.visina = 170;
+Dunja.tezina = 60;
+Dunja.bojaOciju = "braon";
+Dunja.sayHello();
