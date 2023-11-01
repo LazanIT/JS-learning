@@ -29,6 +29,10 @@ class Osoba {
   visina;
   bojaOciju;
   pol;
+
+  sayHello = () => {
+    console.log(`Pozdrav ja se zovem ${this.ime} i prezivam ${this.prezime}`);
+  };
 }
 
 let Petar = new Osoba();
@@ -39,4 +43,4 @@ Petar.visina = 189;
 bojaOciju = "plava";
 pol = "Musko";
 
-console.log(`Pozdrav ja se zovem ${Petar.ime} i prezivam ${Petar.prezime}`);
+Petar.sayHello();
