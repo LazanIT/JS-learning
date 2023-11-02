@@ -30,6 +30,12 @@ class Osoba {
   bojaOciju;
   pol;
 
+  constructor(ime, prezime, pol) {
+    this.ime = ime;
+    this.prezime = prezime;
+    this.pol = pol;
+  }
+
   sayHello = () => {
     if (this.pol === "Musko") {
       console.log(
@@ -43,18 +49,13 @@ class Osoba {
   };
 }
 
-let Petar = new Osoba();
-Petar.ime = "Petar";
-Petar.prezime = "Petric";
+let Petar = new Osoba("Petar", "Petric", "M");
 Petar.tezina = 70;
 Petar.visina = 189;
 Petar.bojaOciju = "plava";
-Petar.pol = "Musko";
 Petar.sayHello();
 
-let Dunja = new Osoba();
-Dunja.ime = "Dunja";
-Dunja.prezime = "Mirosavljevic";
+let Dunja = new Osoba("Dunja", "Mirosavljevic", "Z");
 Dunja.visina = 170;
 Dunja.tezina = 60;
 Dunja.bojaOciju = "braon";
