@@ -69,3 +69,5 @@ Dunja.visina = 170;
 Dunja.tezina = 60;
 Dunja.bojaOciju = "braon";
 Dunja.sayHello();
+
+// Kada se dublje udje u OOP JS-a svaka od klasa se pravi u posebnom fajlu
