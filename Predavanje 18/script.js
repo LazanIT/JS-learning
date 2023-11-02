@@ -31,6 +31,15 @@ class Osoba {
   pol;
 
   constructor(ime, prezime, pol) {
+    // Kako bi sprecili da se neki podatak ne bude unesem, postavljamo jedan IF u kome proveravamo da li je neka od osobina undefined
+    // Primer :
+    if (
+      typeof ime === "undefined" ||
+      typeof prezime === "undefined" ||
+      typeof pol === "undefined"
+    ) {
+      throw new Error("Svaka osobina jedne osobe mora biti unesena");
+    }
     this.ime = ime;
     this.prezime = prezime;
     this.pol = pol;
@@ -39,11 +48,11 @@ class Osoba {
   sayHello = () => {
     if (this.pol === "Musko") {
       console.log(
-        `Pozdrav ja se zovem ${this.ime} i prezivam ${this.prezime} i visok sam ${this.visina}`
+        `Pozdrav ja se zovem ${this.ime} a prezivam ${this.prezime} i visok sam ${this.visina}`
       );
     } else {
       console.log(
-        `Pozdrav ja se zovem ${this.ime} i prezivam ${this.prezime} i visoka sam ${this.visina}`
+        `Pozdrav ja se zovem ${this.ime} a prezivam ${this.prezime} i visoka sam ${this.visina}`
       );
     }
   };
