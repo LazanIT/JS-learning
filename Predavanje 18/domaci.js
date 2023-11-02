@@ -16,3 +16,20 @@
  *      - Ako je Mercedes: S-class, SLS, G-class
  *      - Ako je BMW :  M5, M3, X1
  */
+
+class Vozilo {
+  boja;
+  vrsta;
+
+  constructor(vrsta, boja) {
+    if (vrsta === "automobil" || vrsta === "letelica" || vrsta === "plovilo") {
+      this.vrsta = vrsta;
+    } else {
+      throw new Error("Vozilo mora biti automobil, letelica ili plovilo");
+    }
+
+    this.boja = boja;
+  }
+}
+
+let audi = new Vozilo("automobil", "zuta");
