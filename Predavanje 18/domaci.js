@@ -48,6 +48,12 @@ class Automobil {
     } else {
       throw new Error("Broj vrata moze biti samo 3 ili 5");
     }
+
+    if (gorivo === "benzin" || gorivo === "dizel" || gorivo === "metan") {
+      this.gorivo = gorivo;
+    } else {
+      throw new Error("Gorivo moze biti benzin, dizel ili metan");
+    }
   }
 }
 
