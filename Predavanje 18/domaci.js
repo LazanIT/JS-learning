@@ -21,12 +21,19 @@ class Vozilo {
   boja;
   vrsta;
 
+  // Staticne varijable
+  // Za razliku od obicnih varijabli one mogu da se pozivaju bez da se napravi objekat i pisu se uvek VELIKIM slovima
+  // Primer :
+
+  static VRSTA_VOZILA = ["automobil", "plovilo", "letelica "];
+
   constructor(vrsta, boja) {
     if (typeof vrsta === "undefined" || typeof boja === "undefined") {
       alert("Podaci moraju biti prosledjeni");
     }
 
-    if (vrsta === "automobil" || vrsta === "letelica" || vrsta === "plovilo") {
+    // Optimizacija koda i provera, da li postoji da vrsta vozila u statickoj varijabli
+    if (Vozilo.VRSTA_VOZILA.includes(vrsta)) {
       this.vrsta = vrsta;
     } else {
       throw new Error("Vozilo mora biti automobil, letelica ili plovilo");
@@ -42,7 +49,7 @@ class Automobil {
   brojVrata;
   gorivo;
 
-  constructor(brojVrata, gorivo) {
+  constructor(marka, model, brojVrata, gorivo) {
     if (brojVrata === 3 || 5) {
       this.brojVrata = brojVrata;
     } else {
@@ -54,8 +61,13 @@ class Automobil {
     } else {
       throw new Error("Gorivo moze biti benzin, dizel ili metan");
     }
+
+    this.marka = marka;
+    this.model = model;
   }
 }
 
 let audi = new Vozilo("automobil", "zuta");
-let automobil = new Automobil("3", "benzin");
+let auto = new Automobil("Audi", "A4", "3", "benzin");
+
+console.log(Vozilo.VRSTA_VOZILA); // Iz klase VOZILO izvuci mi vrste vozila
