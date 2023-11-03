@@ -72,9 +72,26 @@ let auto = new Automobil("Audi", "A4", 3, "benzin");
 console.log(Vozilo.VRSTA_VOZILA); // Iz klase VOZILO izvuci mi vrste vozila
 
 const vrstaSelect = document.querySelector("#vrsta");
+const BrojVrata = document.querySelector("#brojVrata");
+const vrstaGoriva = document.querySelector("#gorivo");
+
 Vozilo.VRSTA_VOZILA.forEach((vrsta) => {
   let option = document.createElement("option");
   option.innerText = vrsta;
   option.value = vrsta;
   vrstaSelect.append(option);
+});
+
+Automobil.VRSTA_GORIVA.forEach((gorivo) => {
+  let option = document.createElement("option");
+  option.innerText = gorivo;
+  option.value = gorivo;
+  vrstaGoriva.append(option);
+});
+
+Automobil.BROJ_VRATA.forEach((brojVrata) => {
+  let option = document.querySelector("option");
+  option.innerText = brojVrata;
+  option.value = brojVrata;
+  BrojVrata.append(option);
 });
