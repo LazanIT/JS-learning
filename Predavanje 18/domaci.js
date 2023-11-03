@@ -33,12 +33,10 @@ class Vozilo {
     }
 
     // Optimizacija koda i provera, da li postoji da vrsta vozila u statickoj varijabli
-    if (Vozilo.VRSTA_VOZILA.includes(vrsta)) {
-      this.vrsta = vrsta;
-    } else {
+    if (!Vozilo.VRSTA_VOZILA.includes(vrsta)) {
       throw new Error("Vozilo mora biti automobil, letelica ili plovilo");
     }
-
+    this.vrsta = vrsta;
     this.boja = boja;
   }
 }
@@ -50,27 +48,25 @@ class Automobil {
   gorivo;
 
   static VRSTA_GORIVA = ["benzin", "dizel", "metan", "gas"];
-  static BROJ_VRATA = ["2", "3", "5"];
+  static BROJ_VRATA = [3, 5];
 
   constructor(marka, model, brojVrata, gorivo) {
-    if (Automobil.BROJ_VRATA.includes(brojVrata)) {
-      this.brojVrata = brojVrata;
-    } else {
+    if (!Automobil.BROJ_VRATA.includes(brojVrata)) {
       throw new Error("Broj vrata moze biti samo 3 ili 5");
     }
 
-    if (Automobil.VRSTA_GORIVA.includes(gorivo)) {
-      this.gorivo = gorivo;
-    } else {
+    if (!Automobil.VRSTA_GORIVA.includes(gorivo)) {
       throw new Error("Gorivo moze biti benzin, dizel ili metan");
     }
 
+    this.gorivo = gorivo;
+    this.brojVrata = brojVrata;
     this.marka = marka;
     this.model = model;
   }
 }
 
 let audi = new Vozilo("automobil", "zuta");
-let auto = new Automobil("Audi", "A4", "3", "benzin");
+let auto = new Automobil("Audi", "A4", 3, "benzin");
 
 console.log(Vozilo.VRSTA_VOZILA); // Iz klase VOZILO izvuci mi vrste vozila
