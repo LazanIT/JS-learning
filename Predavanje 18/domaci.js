@@ -36,4 +36,19 @@ class Vozilo {
   }
 }
 
+class Automobil {
+  marka;
+  model;
+  brojVrata;
+  gorivo;
+
+  constructor(brojVrata, gorivo) {
+    if (brojVrata === 3 || 5) {
+      this.brojVrata = brojVrata;
+    } else {
+      throw new Error("Broj vrata moze biti samo 3 ili 5");
+    }
+  }
+}
+
 let audi = new Vozilo("automobil", "zuta");
