@@ -49,14 +49,17 @@ class Automobil {
   brojVrata;
   gorivo;
 
+  static VRSTA_GORIVA = ["benzin", "dizel", "metan", "gas"];
+  static BROJ_VRATA = ["2", "3", "5"];
+
   constructor(marka, model, brojVrata, gorivo) {
-    if (brojVrata === 3 || 5) {
+    if (Automobil.BROJ_VRATA.includes(brojVrata)) {
       this.brojVrata = brojVrata;
     } else {
       throw new Error("Broj vrata moze biti samo 3 ili 5");
     }
 
-    if (gorivo === "benzin" || gorivo === "dizel" || gorivo === "metan") {
+    if (Automobil.VRSTA_GORIVA.includes(gorivo)) {
       this.gorivo = gorivo;
     } else {
       throw new Error("Gorivo moze biti benzin, dizel ili metan");
