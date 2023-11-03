@@ -22,6 +22,10 @@ class Vozilo {
   vrsta;
 
   constructor(vrsta, boja) {
+    if (typeof vrsta === "undefined" || typeof boja === "undefined") {
+      alert("Podaci moraju biti prosledjeni");
+    }
+
     if (vrsta === "automobil" || vrsta === "letelica" || vrsta === "plovilo") {
       this.vrsta = vrsta;
     } else {
