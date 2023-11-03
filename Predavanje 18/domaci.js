@@ -70,3 +70,11 @@ let audi = new Vozilo("automobil", "zuta");
 let auto = new Automobil("Audi", "A4", 3, "benzin");
 
 console.log(Vozilo.VRSTA_VOZILA); // Iz klase VOZILO izvuci mi vrste vozila
+
+const vrstaSelect = document.querySelector("#vrsta");
+Vozilo.VRSTA_VOZILA.forEach((vrsta) => {
+  let option = document.createElement("option");
+  option.innerText = vrsta;
+  option.value = vrsta;
+  vrstaSelect.append(option);
+});
