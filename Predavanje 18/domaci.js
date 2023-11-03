@@ -58,3 +58,4 @@ class Automobil {
 }
 
 let audi = new Vozilo("automobil", "zuta");
+let automobil = new Automobil("3", "benzin");
