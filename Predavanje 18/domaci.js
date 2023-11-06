@@ -40,8 +40,8 @@ class Vozilo {
     this.boja = boja;
   }
 }
-
-class Automobil {
+// Pomocu extends mi dopustamo da klasa AUTOMOBIL ima pristup celoj klasi VOZILO
+class Automobil extends Vozilo {
   marka;
   model;
   brojVrata;
@@ -50,7 +50,8 @@ class Automobil {
   static VRSTA_GORIVA = ["benzin", "dizel", "metan", "gas"];
   static BROJ_VRATA = [3, 5, 2];
 
-  constructor(marka, model, brojVrata, gorivo) {
+  constructor(marka, model, brojVrata, gorivo, vrsta, boja) {
+    super(vrsta, boja); // super je isto kao da smo rekli new Vozilo (vrtsa, boja) -> Vozilo.constructor()
     if (!Automobil.BROJ_VRATA.includes(brojVrata)) {
       throw new Error("Broj vrata moze biti samo 3 ili 5");
     }
@@ -67,7 +68,7 @@ class Automobil {
 }
 
 let audi = new Vozilo("automobil", "zuta");
-let auto = new Automobil("Audi", "A4", 3, "benzin");
+let auto = new Automobil("Audi", "A4", 3, "benzin", "automobil", "plava");
 
 console.log(Vozilo.VRSTA_VOZILA); // Iz klase VOZILO izvuci mi vrste vozila
 
