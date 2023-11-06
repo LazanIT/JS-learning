@@ -25,17 +25,17 @@ class Vozilo {
   // Za razliku od obicnih varijabli one mogu da se pozivaju bez da se napravi objekat i pisu se uvek VELIKIM slovima
   // Primer :
 
-  static VRSTA_VOZILA = ["automobil", "plovilo", "letelica "];
+  static VRSTA_VOZILA = ["automobil", "plovilo", "letelica"];
 
   constructor(vrsta, boja) {
     if (typeof vrsta === "undefined" || typeof boja === "undefined") {
-      alert("Podaci moraju biti prosledjeni");
+      throw new Error("Podaci moraju biti proslijeđeni");
     }
 
-    // Optimizacija koda i provera, da li postoji da vrsta vozila u statickoj varijabli
     if (!Vozilo.VRSTA_VOZILA.includes(vrsta)) {
-      throw new Error("Vozilo mora biti automobil, letelica ili plovilo");
+      throw new Error("Vozilo mora biti automobil, letjelica ili plovilo");
     }
+
     this.vrsta = vrsta;
     this.boja = boja;
   }
@@ -48,7 +48,7 @@ class Automobil {
   gorivo;
 
   static VRSTA_GORIVA = ["benzin", "dizel", "metan", "gas"];
-  static BROJ_VRATA = [3, 5];
+  static BROJ_VRATA = [3, 5, 2];
 
   constructor(marka, model, brojVrata, gorivo) {
     if (!Automobil.BROJ_VRATA.includes(brojVrata)) {
@@ -90,7 +90,7 @@ Automobil.VRSTA_GORIVA.forEach((gorivo) => {
 });
 
 Automobil.BROJ_VRATA.forEach((brojVrata) => {
-  let option = document.querySelector("option");
+  let option = document.createElement("option");
   option.innerText = brojVrata;
   option.value = brojVrata;
   BrojVrata.append(option);
