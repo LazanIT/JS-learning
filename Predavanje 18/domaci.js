@@ -101,5 +101,6 @@ let btnVehicle = document.getElementById("createVehicle");
 btnVehicle.addEventListener("click", () => {
   // console.log("");
   let izabranaVrsta = vrstaSelect.value;
-  console.log(izabranaVrsta);
+  let izabranBrojVrata = brojVrata.value;
+  let izabranoGorivo = vrstaGoriva.value;
 });
