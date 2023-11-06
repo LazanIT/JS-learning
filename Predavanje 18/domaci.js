@@ -95,3 +95,9 @@ Automobil.BROJ_VRATA.forEach((brojVrata) => {
   option.value = brojVrata;
   BrojVrata.append(option);
 });
+
+let btnVehicle = document.getElementById("createVehicle");
+
+btnVehicle.addEventListener("click", () => {
+  // console.log("");
+});
