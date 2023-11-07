@@ -50,8 +50,8 @@ class Automobil extends Vozilo {
   static VRSTA_GORIVA = ["benzin", "dizel", "metan", "gas"];
   static BROJ_VRATA = [3, 5, 2];
 
-  constructor(marka, model, brojVrata, gorivo, vrsta, boja) {
-    super(vrsta, boja); // super je isto kao da smo rekli new Vozilo (vrtsa, boja) -> Vozilo.constructor()
+  constructor(marka, model, brojVrata, gorivo, boja) {
+    super("automobil", boja); // super je isto kao da smo rekli new Vozilo (vrtsa, boja) -> Vozilo.constructor()
     if (!Automobil.BROJ_VRATA.includes(brojVrata)) {
       throw new Error("Broj vrata moze biti samo 3 ili 5");
     }
@@ -68,7 +68,7 @@ class Automobil extends Vozilo {
 }
 
 let audi = new Vozilo("automobil", "zuta");
-let auto = new Automobil("Audi", "A4", 3, "benzin", "automobil", "plava");
+let auto = new Automobil("Audi", "A4", 3, "benzin", "plava");
 
 console.log(Vozilo.VRSTA_VOZILA); // Iz klase VOZILO izvuci mi vrste vozila
 
@@ -105,3 +105,12 @@ btnVehicle.addEventListener("click", () => {
   let izabranBrojVrata = brojVrata.value;
   let izabranoGorivo = vrstaGoriva.value;
 });
+
+// Objasnjenje koda :
+/**
+ * Prvo sto smo uradili je da smo u super za vrstu prosledili da je automobil
+ * posto je logicno da kada pravimo automobil, vrsta mora biti automobil
+ * ne moze biti avion
+ * Druga stvar je da sada kada pravimo nov automobil, mi pravimo i vozilo
+ *
+ */
