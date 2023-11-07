@@ -112,5 +112,5 @@ btnVehicle.addEventListener("click", () => {
  * posto je logicno da kada pravimo automobil, vrsta mora biti automobil
  * ne moze biti avion
  * Druga stvar je da sada kada pravimo nov automobil, mi pravimo i vozilo
- *
+ * Treca stvar je da je klasa VOZILO ustvari ta parrent klasa, koju sve ostale child klase nasledjuju
  */
