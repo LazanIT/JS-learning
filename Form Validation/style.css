@@ -43,6 +43,7 @@ form div input {
   width: 100%;
   font-size: 18px;
   padding: 0 10px;
+  background-color: aquamarine;
 }
 
 form div button {
