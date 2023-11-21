@@ -58,3 +58,6 @@ form ul {
 form ul li {
   color: red;
 }
+::placeholder {
+  font-size: 2rem;
+}
