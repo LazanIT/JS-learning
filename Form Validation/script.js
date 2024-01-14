@@ -10,5 +10,10 @@ let errors = {
 };
 
 inputs.forEach((element) => {
-  console.log(element);
+  //   console.log(element);
+  element.addEventListener("change", (e) => {
+    let currentInput = e.target;
+
+    console.log(currentInput);
+  });
 });
