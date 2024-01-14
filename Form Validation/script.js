@@ -13,7 +13,13 @@ inputs.forEach((element) => {
   //   console.log(element);
   element.addEventListener("change", (e) => {
     let currentInput = e.target;
+    let inputValue = currentInput.value;
+    let inputName = currentInput.getAttribute("name");
 
-    console.log(currentInput);
+    if (inputValue.lenght > 4) {
+      console.log("top");
+    } else {
+      console.log("notop");
+    }
   });
 });
