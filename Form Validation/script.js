@@ -1,5 +1,3 @@
-// console.log("test 123");
-
 let inputs = document.querySelectorAll("input");
 let errors = {
   ime_prezime: [],
@@ -27,5 +25,22 @@ inputs.forEach((element) => {
 });
 
 const populateErrors = (errors) => {
-  console.log(errors);
+  for (let element of document.querySelectorAll("ul")) {
+    element.remove();
+  }
+
+  for (let key of Object.keys(errors)) {
+    let input = document.querySelector(`input[name="${key}"]`);
+    let parentElement = input.parentElement;
+    let errorsElement = document.createElement("ul");
+    parentElement.appendChild(errorsElement);
+
+    errors[key].forEach((error) => {
+      let li = document.createElement("li");
+      li.style.color = "black";
+      li.style.fontWeight = "600";
+      li.innerText = error;
+      errorsElement.appendChild(li);
+    });
+  }
 };
