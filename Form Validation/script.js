@@ -8,16 +8,23 @@ let errors = {
 };
 
 inputs.forEach((element) => {
-  //   console.log(element);
   element.addEventListener("change", (e) => {
     let currentInput = e.target;
     let inputValue = currentInput.value;
     let inputName = currentInput.getAttribute("name");
 
-    if (inputValue.lenght > 4) {
-      console.log("top");
+    if (inputValue.length > 4) {
+      errors[inputName] = [];
+      switch (inputName) {
+        case "ime_prezime":
+          let validation = inputValue.trim();
+          validation = validation.split(" ");
+          if (validation.length < 2) {
+            errors[inputName].push("Morate napisati i ime i prezime");
+          }
+      }
     } else {
-      errors[inputName] = ["Polje ne moze imati manje od 5 karaktera"];
+      errors[inputName] = ["Polje ne može imati manje od 5 karaktera"];
     }
 
     populateErrors(errors);
@@ -37,7 +44,6 @@ const populateErrors = (errors) => {
 
     errors[key].forEach((error) => {
       let li = document.createElement("li");
-      li.style.color = "black";
       li.style.fontWeight = "600";
       li.innerText = error;
       errorsElement.appendChild(li);
