@@ -22,8 +22,10 @@ inputs.forEach((element) => {
       errors[inputName] = ["Polje ne moze imati manje od 5 karaktera"];
     }
 
-    let list = document.querySelector("div");
-
-    list.innerHTML = `<ul><li>${errors[inputName[0]]}</li></ul>`;
+    populateErrors(errors);
   });
 });
+
+const populateErrors = (errors) => {
+  console.log(errors);
+};
