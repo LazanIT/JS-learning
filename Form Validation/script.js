@@ -25,6 +25,16 @@ inputs.forEach((element) => {
           break;
 
         case "email":
+          if (!validateEmail(inputValue)) {
+            errors[inputName].push("Neispravna email adresa");
+          }
+          break;
+
+        case "ponovi_lozinku":
+          let lozinka = document.querySelector(`input[name="lozinka"]`).value;
+          if (inputValue !== lozinka) {
+            errors[inputName].push("Lozinke se ne poklapaju");
+          }
       }
     } else {
       errors[inputName] = ["Polje ne može imati manje od 5 karaktera"];
@@ -57,5 +67,7 @@ const populateErrors = (errors) => {
 const validateEmail = (email) => {
   if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
     return true;
+  } else {
+    return false;
   }
 };
