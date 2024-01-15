@@ -20,8 +20,11 @@ inputs.forEach((element) => {
           let validation = inputValue.trim();
           validation = validation.split(" ");
           if (validation.length < 2) {
-            errors[inputName].push("Morate napisati i ime i prezime");
+            errors[inputName].push("Morate napisati ime i prezime");
           }
+          break;
+
+        case "email":
       }
     } else {
       errors[inputName] = ["Polje ne može imati manje od 5 karaktera"];
@@ -48,5 +51,11 @@ const populateErrors = (errors) => {
       li.innerText = error;
       errorsElement.appendChild(li);
     });
+  }
+};
+
+const validateEmail = (email) => {
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+    return true;
   }
 };
