@@ -1,20 +1,15 @@
-const Osoba = {
-  first_name: "niko",
-  last_name: "Nikolic",
-  phone: "+381",
-  getNameAndPhone: function () {
-    console.log(`${this.first_name} - ${this.phone}`);
-  },
-};
+function Osoba(first_name, last_name, phone) {
+  this.first_name = first_name;
+  this.last_name = last_name;
+  this.phone = phone;
 
-const Osoba2 = {
-  first_name: "ivan",
-  last_name: "ivanovic",
-  phone: "+381",
-  getNameAndPhone: function () {
-    console.log(`${this.first_name} - ${this.phone}`);
-  },
-};
+  this.getNameAndPhone = function () {
+    console.log(`${first_name} - ${phone}`);
+  };
+}
 
-Osoba.getNameAndPhone();
-Osoba2.getNameAndPhone();
+let osoba1 = new Osoba("Niko", "Nikolic", "+381");
+let osoba2 = new Osoba("Ivan", "Ivanovic", "+387");
+
+osoba1.getNameAndPhone();
+osoba2.getNameAndPhone();
