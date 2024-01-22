@@ -50,4 +50,4 @@ let config = {
   },
 };
 
-let validator = new Validator();
+let validator = new Validator(config);
