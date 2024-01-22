@@ -52,8 +52,31 @@ class Validator {
       fieldValue.length > elementFields[fieldName].maxlength
     ) {
       this.errors[fieldName].push(
-        `Polje mora imati minimalno ${elementFields[fieldName].minlength} i maksimalno ${elementFields[fieldName].maxlength}`
+        `Polje mora imati minimalno ${elementFields[fieldName].minlength} i maksimalno ${elementFields[fieldName].maxlength} karaktera`
       );
+    }
+
+    if (elementFields[fieldName].matching) {
+      let matchingElement = document.querySelector(
+        `input[name = "${elementFields[fieldName].matching}"]`
+      );
+
+      if (fieldValue !== matchingElement.value) {
+        this.errors[fieldName].push("Lozinke se ne poklapaju");
+      }
+
+      if (this.errors[fieldName].length === 0) {
+        this.errors[fieldName] = [];
+        this.errors[elementFields[fieldName].matching] = [];
+      }
+    }
+
+    this.populateErrors(this.errors);
+  }
+
+  populateErrors(errors) {
+    for (const elem of document.querySelectorAll("ul")) {
+      elem.remove();
     }
   }
 
